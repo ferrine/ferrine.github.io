@@ -1,10 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import sys
+import os
+
+# Simple hack to do modular development with themes
+sys.path.insert(
+    0,
+    os.path.abspath(os.path.dirname(__file__))
+)
+from themesconf.blue_penguin import *
 
 AUTHOR = 'Kochurov Maxim'
 SITENAME = 'In Search Of The Holy Posterior'
-SITEURL = 'http://ferrine.github.io'
+SITEURL = 'https://ferrine.github.io'
 
 PATH = 'content'
 
@@ -32,7 +41,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 DEFAULT_METADATA = {
     'status': 'draft',
