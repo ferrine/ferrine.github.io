@@ -10,10 +10,13 @@ sys.path.insert(
     os.path.abspath(os.path.dirname(__file__))
 )
 from themesconf.blue_penguin import *
+DEFAULT_DATE_FORMAT = '%b %d, %Y'
 
 AUTHOR = 'Kochurov Maxim'
 SITENAME = 'In Search Of The Holy Posterior'
 SITEURL = 'https://ferrine.github.io'
+ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 PATH = 'content'
 
@@ -28,11 +31,6 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (
-    ('Twitter', 'https://twitter.com/ferrine96'),
-)
-
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/ferrine96'),
           ('GitHub', 'https://github.com/ferrine'),)
@@ -46,3 +44,8 @@ RELATIVE_URLS = True
 DEFAULT_METADATA = {
     'status': 'draft',
 }
+
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
+           'liquid_tags.include_code', 'liquid_tags.notebook',
+           'liquid_tags.literal']

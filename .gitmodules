@@ -1,3 +1,6 @@
 [submodule "theme-blue-penguin"]
 	path = theme-blue-penguin
 	url = https://github.com/ferrine/blue-penguin
+[submodule "pelican-plugins"]
+	path = pelican-plugins
+	url = https://github.com/getpelican/pelican-plugins
