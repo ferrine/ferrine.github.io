@@ -34,7 +34,7 @@ LINKS = (
 )
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
+SOCIAL = (('Twitter', 'https://twitter.com/ferrine96'),
           ('GitHub', 'https://github.com/ferrine'),)
 
 

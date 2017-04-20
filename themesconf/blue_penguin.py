@@ -25,6 +25,4 @@ MENU_INTERNAL_PAGES = (
 )
 # additional menu items
 MENUITEMS = (
-    ('GitHub', 'https://github.com/'),
-    ('Linux Kernel', 'https://www.kernel.org/'),
 )
