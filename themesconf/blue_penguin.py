@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-THEME          = 'blue-penguin'
+THEME          = 'theme-blue-penguin'
 DISPLAY_HEADER = True
 DISPLAY_FOOTER = True
 DISPLAY_HOME   = True
