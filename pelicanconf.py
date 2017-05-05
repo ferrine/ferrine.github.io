@@ -44,12 +44,13 @@ RELATIVE_URLS = True
 
 DEFAULT_METADATA = {
     'status': 'draft',
+    'add_comments': True
 }
 
 
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
-           'liquid_tags.literal']
+           'liquid_tags.literal', 'googleplus_comments']
 
 SUMMARY_USE_FIRST_PARAGRAPH = True
