@@ -1,6 +1,6 @@
 title: Accepted to GSoC
 date: 2017-05-05
-status : draft
+status : publish
 
 # Hurray!
 
