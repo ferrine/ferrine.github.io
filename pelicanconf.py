@@ -30,6 +30,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+ARTICLE_EXCLUDES = ['comments', 'pages']
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/ferrine96'),
@@ -45,9 +46,11 @@ DEFAULT_METADATA = {
     'status': 'draft',
 }
 
+
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
-           'liquid_tags.literal']
+           'liquid_tags.literal', 'pelican_comments']
 
 SUMMARY_USE_FIRST_PARAGRAPH = True
+COMMENTS_DIR = ['comments']
