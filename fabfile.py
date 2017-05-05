@@ -88,5 +88,6 @@ def publish():
 
 def gh_pages():
     """Publish to GitHub Pages"""
-    rebuild()
+    clean()
+    preview()
     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
