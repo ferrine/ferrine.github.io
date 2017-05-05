@@ -1,6 +1,7 @@
 title: Accepted to GSoC
-date: 2017-05-05
+date: 2017-05-05T02:20:00
 status: published
+tags: gsoc, welcome
 
 # Hurray!
 
