@@ -3,12 +3,11 @@ date: 2017-05-05
 status: published
 
 # Hurray!
-<!-- PELICAN_BEGIN_SUMMARY -->
+
 Yesterday I got an email from [NumFOCUS](https://www.numfocus.org/) with congratulations. 
-They said that I was accepted to GSoC. So summer is going to be full of adventures. I'd like
-say many thanks to my mentors, [Taku Yoshioka](https://github.com/taku-y) and [Thomas Wiecki](https://github.com/twiecki) 
+They said that I had been accepted to GSoC. So summer is going to be full of adventures. I'd like
+say many thanks to my mentors, [Taku Yoshioka](https://github.com/taku-y) and [Thomas Wiecki](https://github.com/twiecki), 
 for choosing me.
-<!-- PELICAN_END_SUMMARY -->
 
 A lot of work is going to be done. I'm very excited with Bayesian stuff and what's the best is 
 the feeling that you collaborate with pymc-dev team from all over the word. That you work on
