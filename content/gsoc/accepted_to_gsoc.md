@@ -21,6 +21,6 @@ point but a distribution. There are few libraries that allow to do so ([Edward](
 and [PyMC3](https://github.com/pymc-devs/pymc3)). The main idea behind my proposal is to make VI closer
 to the final user, data scientist, that constructs models and solves business problems. That's why
 I've started [Gelato](https://github.com/ferrine/gelato) project. It is in not in a release stage yet, but I 
-have a strong willing to change it.
+have a strong desire to change it.
 
 To conclude I'm going to have best summer ever!
