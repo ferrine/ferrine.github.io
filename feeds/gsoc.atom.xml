@@ -17,5 +17,5 @@ point but a distribution. There are few libraries that allow to do so (&lt;a hre
 and &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a&gt;). The main idea behind my proposal is to make VI closer
 to the final user, data scientist, that constructs models and solves business problems. That's why
 I've started &lt;a href="https://github.com/ferrine/gelato"&gt;Gelato&lt;/a&gt; project. It is in not in a release stage yet, but I 
-have a strong willing to change it.&lt;/p&gt;
+have a strong desire to change it.&lt;/p&gt;
 &lt;p&gt;To conclude I'm going to have best summer ever!&lt;/p&gt;</content><category term="gsoc"></category><category term="welcome"></category></entry></feed>
