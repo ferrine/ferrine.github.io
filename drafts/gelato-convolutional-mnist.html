@@ -393,7 +393,7 @@ $$ELBO=pi*KL[q(w|mu,rho)||p(w)] + E_q[log p(D|w)]$$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Getting ELBO for model and optimizing it is quite easy and can be cone just in few lines. As we will perform batch training we have to say what population size we have for observed var or else we'll get invalid approximation.</p>
-<p>Let's see' what we've created</p>
+<p>Let's see what we've created</p>
 
 </div>
 </div>
@@ -438,8 +438,8 @@ $$ELBO=pi*KL[q(w|mu,rho)||p(w)] + E_q[log p(D|w)]$$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Seems something went wrong:(</p>
-<p>That's not the thing you expect, but that's just a nested model
-You can find your root model accessing <code>network.root</code>. It stores all parameters, porentials, likelihood</p>
+<p>That's not the thing you expect, but that's just a nested model.
+You can find your root model accessing <code>network.root</code>. It stores all parameters, porentials, likelihood, etc</p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ You can find your root model accessing <code>network.root</code>. It stores all 
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I prefer object oriented style for doing inference in PyMC3 it allows more flexibility</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I prefer object oriented style for doing inference in PyMC3 as it allows more flexibility</span>
 <span class="c1"># Remember that we need root model here</span>
 <span class="k">with</span> <span class="n">network</span><span class="o">.</span><span class="n">root</span><span class="p">:</span>
     <span class="n">advi</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">ADVI</span><span class="p">()</span>
