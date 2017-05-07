@@ -12,5 +12,6 @@ Thumbs.db
 __*
 output/
 pelican_themes/
+_nb_header.html
 
 *.pyc*

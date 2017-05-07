@@ -19,6 +19,8 @@ ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 PATH = 'content'
+STATIC_PATHS = ['images', 'figures', 'favicon.ico']
+
 
 TIMEZONE = 'Europe/Moscow'
 
@@ -51,6 +53,13 @@ DEFAULT_METADATA = {
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
-           'liquid_tags.literal', 'googleplus_comments']
+           'liquid_tags.literal', 'googleplus_comments', 'render_math']
 
 SUMMARY_USE_FIRST_PARAGRAPH = True
+
+if not os.path.exists('_nb_header.html'):
+    import warnings
+    warnings.warn("_nb_header.html not found.  "
+                  "Rerun make html to finalize build.")
+else:
+    EXTRA_HEADER = open('_nb_header.html').read()
