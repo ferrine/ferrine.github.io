@@ -197,8 +197,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-priors-for-weights">Create priors for weights<a class="anchor-link" href="#Create-priors-for-weights">&#182;</a></h2><p>Gelato has a flexible way to define a prior on weight instead of just shared variable. That allows to deal with uncertanty in weights and in predictions as well.</p>
-<h3 id="Disclamer">Disclamer<a class="anchor-link" href="#Disclamer">&#182;</a></h3><p>I have to note that Gelato has some overhead magic with wrappring lasagne layers. Espessially there is no need to use gelato layer if you pass gelato <code>Spec</code> class to lasagne layer to define a weight. But using them happens to be very convenient. There is a handy function <code>set_default_spec</code> that declares what prior to use if none specified. Let's see how it works</p>
+<h2 id="Create-priors-for-weights-(Spec-classes)">Create priors for weights (Spec classes)<a class="anchor-link" href="#Create-priors-for-weights-(Spec-classes)">&#182;</a></h2><p>Gelato has a flexible way to define a prior on weight instead of just shared variable. That allows to deal with uncertanty in weights and in predictions as well.</p>
 
 </div>
 </div>
@@ -530,7 +529,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you need some more complex transformation other than builtin tensor operatoins you can use a simple wrapper over a function</p>
+<p>If you need some more complex transformation other than builtin tensor operations you can use a simple wrapper over a function</p>
 
 </div>
 </div>
@@ -608,6 +607,16 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Disclamer">Disclamer<a class="anchor-link" href="#Disclamer">&#182;</a></h3><p>I have to note that Gelato has some overhead magic with wrappring lasagne layers. Espessially there is no need to use gelato layer if you pass gelato <code>Spec</code> class to lasagne layer to define a weight. But using them happens to be very convenient. There is a handy function <code>set_default_spec</code> that declares what prior to use if none specified. Let's see how it works</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
