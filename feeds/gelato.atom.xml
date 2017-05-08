@@ -586,7 +586,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Disclamer"&gt;Disclamer&lt;a class="anchor-link" href="#Disclamer"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;I have to note that Gelato has some overhead magic with wrappring lasagne layers. Espessially there is no need to use gelato layer if you pass gelato &lt;code&gt;Spec&lt;/code&gt; class to Lasagne (Keras) layer to define a weight. But using them happens to be very convenient. There is a handy function &lt;code&gt;set_default_spec&lt;/code&gt; that declares what prior to use if none specified. Let's see how it works.&lt;/p&gt;
+&lt;h3 id="Disclamer"&gt;Disclamer&lt;a class="anchor-link" href="#Disclamer"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;I have to note that Gelato has some overhead magic with wrappring lasagne layers. Espessially there is no need to use gelato layer if you pass gelato &lt;code&gt;Spec&lt;/code&gt; class to Lasagne layer to define a weight. But using them happens to be very convenient. There is a handy function &lt;code&gt;set_default_spec&lt;/code&gt; that declares what prior to use if none specified. Let's see how it works.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
