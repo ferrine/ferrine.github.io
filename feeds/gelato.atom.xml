@@ -5,14 +5,14 @@
 
 
 
-&lt;p&gt;I was inspired by &lt;a href="https://github.com/twiecki"&gt;@twiecki&lt;/a&gt; and his great &lt;a href="http://twiecki.github.io/blog/2016/07/05/bayesian-deep-learning/"&gt;post&lt;/a&gt; about bayesian neural networks. But I thought that that way of creating BNNs is not obvious and easy for people. That's why I decided to make &lt;a href="https://github.com/ferrine/gelato"&gt;Gelato&lt;/a&gt; that is a bridge for &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a&gt; and &lt;a href="https://github.com/Lasagne/Lasagne"&gt;Lasagne&lt;/a&gt;.
+&lt;p&gt;I was inspired by &lt;a href="https://github.com/twiecki"&gt;@twiecki&lt;/a&gt; and his great &lt;a href="http://twiecki.github.io/blog/2016/07/05/bayesian-deep-learning/"&gt;post&lt;/a&gt; about Bayesian neural networks. But I thought that that way of creating BNNs is not obvious and easy for people. That's why I decided to make &lt;a href="https://github.com/ferrine/gelato"&gt;Gelato&lt;/a&gt; that is a bridge for &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a&gt; and &lt;a href="https://github.com/Lasagne/Lasagne"&gt;Lasagne&lt;/a&gt;.
 I will use his convolution bnn from the post as an example of how to use gelato API.</summary><content type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;I was inspired by &lt;a href="https://github.com/twiecki"&gt;@twiecki&lt;/a&gt; and his great &lt;a href="http://twiecki.github.io/blog/2016/07/05/bayesian-deep-learning/"&gt;post&lt;/a&gt; about bayesian neural networks. But I thought that that way of creating BNNs is not obvious and easy for people. That's why I decided to make &lt;a href="https://github.com/ferrine/gelato"&gt;Gelato&lt;/a&gt; that is a bridge for &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a&gt; and &lt;a href="https://github.com/Lasagne/Lasagne"&gt;Lasagne&lt;/a&gt;.
+&lt;p&gt;I was inspired by &lt;a href="https://github.com/twiecki"&gt;@twiecki&lt;/a&gt; and his great &lt;a href="http://twiecki.github.io/blog/2016/07/05/bayesian-deep-learning/"&gt;post&lt;/a&gt; about Bayesian neural networks. But I thought that that way of creating BNNs is not obvious and easy for people. That's why I decided to make &lt;a href="https://github.com/ferrine/gelato"&gt;Gelato&lt;/a&gt; that is a bridge for &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a&gt; and &lt;a href="https://github.com/Lasagne/Lasagne"&gt;Lasagne&lt;/a&gt;.
 I will use his convolution bnn from the post as an example of how to use gelato API.&lt;/p&gt;
 
 &lt;/div&gt;
