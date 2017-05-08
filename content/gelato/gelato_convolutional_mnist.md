@@ -1,5 +1,5 @@
 title: Gelato Convolutional MNIST
-date: 2017-08-05T16:14:00
+date: 2017-05-08T16:14:00
 status: published
 tags: Gelato, Lasagne, PyMC3
 
