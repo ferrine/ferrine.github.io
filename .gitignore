@@ -10,8 +10,10 @@ Thumbs.db
 .rvmrc
 *.lock
 __*
+!__init__.py
 output/
 pelican_themes/
 _nb_header.html
 
 *.pyc*
+.ipynb_checkpoints/
