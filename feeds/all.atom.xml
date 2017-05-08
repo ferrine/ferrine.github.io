@@ -674,7 +674,7 @@ True
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Yes, Gelato layers are Models and Layers at the same time. Moreover contest is taken from the previous layers so that you no more need &lt;code&gt;with model: ...&lt;/code&gt; construction for most usecases.&lt;/p&gt;
+&lt;p&gt;Yes, Gelato layers are Models and Layers at the same time. Moreover context is taken from the previous layers so that you no more need &lt;code&gt;with model: ...&lt;/code&gt; construction for most usecases.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
