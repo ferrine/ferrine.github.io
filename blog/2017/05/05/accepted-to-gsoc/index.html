@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="https://ferrine.github.io/theme/css/pygments.css" type="text/css" />
     <link rel="stylesheet" href="https://ferrine.github.io/theme/css/print.css" type="text/css" media="print" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
     <meta name="generator" content="Pelican" />
@@ -36,7 +41,7 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">май 05, 2017</h4>
+        <div id="content">            <h4 class="date">May 05, 2017</h4>
 
             <article class="post">
                 <h2 class="title">
@@ -72,23 +77,16 @@ have a strong desire to change it.</p>
                     &nbsp;<a href="https://ferrine.github.io/tag/gsoc.html" class="tags">gsoc</a>
                     &nbsp;<a href="https://ferrine.github.io/tag/welcome.html" class="tags">welcome</a>
                 </div>
-<div id="commentswrap">
-    <h2>Comments</h2>
-    <div id="comments"></div>
-</div>
-    
-    <script src="https://apis.google.com/js/plusone.js"></script>
-    <script>
-        $(document).ready(function () {
-            gapi.comments.render('comments', {
-                href: window.location,
-                width: '600',
-                first_party_property: 'BLOGGER',
-                view_type: 'FILTERED_POSTMOD'
-            });
-    });
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'ferrine';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
     </script>
-
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
             </article>            <div class="clear"></div>
             <footer>
                 <table style="margin: 0 auto">
