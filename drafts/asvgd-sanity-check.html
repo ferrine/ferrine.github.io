@@ -3419,7 +3419,7 @@ rkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Results are the same. What about tracking paramenters.</p>
+<p>Results are the same. What about tracking parameters.</p>
 
 </div>
 </div>
@@ -4114,8 +4114,8 @@ YII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Temperature-magic">Temperature magic<a class="anchor-link" href="#Temperature-magic">&#182;</a></h2><p>Previously algorithm was outlined without using temperature. Here I'll show how and why it fits there.</p>
 <p>Recall $\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)]$. That part of Stein Gradient tends to move particles to the area with higher density.</p>
-<p>And second one $\sum^{n}_{j=1}[\nabla_{x_j} k(x_j,x)]$ moves particles away from each other.</p>
-<p>The main problem arizes when we have small number of particles ($n$) or when our dimensionality is relatively high to $n$. Diversive power of the second gradient part is too weak. We can scale it up with temperature. So algorithm is changed a bit</p>
+<p>And the second one $\sum^{n}_{j=1}[\nabla_{x_j} k(x_j,x)]$ moves particles away from each other.</p>
+<p>The main problem arises when we have small number of particles ($n$) or when our dimensionality is relatively high to $n$. Diversive power of the second gradient part is too weak. We can scale it up with temperature. So algorithm is changed a bit</p>
 <h3 id="ASVGD-with-temperature">ASVGD with temperature<a class="anchor-link" href="#ASVGD-with-temperature">&#182;</a></h3><p><em>Input:</em> Parametrized random generator $R_{\theta}$, $n$ - number of samples from $R_{\theta}$, temperature $T$</p>
 <p><em>Output:</em> $R_{\theta^{*}}$ that approximates the target distribution.</p>
 <p><strong>On each iteration</strong></p>
