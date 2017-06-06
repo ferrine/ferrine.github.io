@@ -23,7 +23,7 @@
     <meta name="description" content="" />
     <meta name="author" content="Kochurov Maxim" />
 
-    <meta name="keywords" content="PyMC3,GSoC" />
+    <meta name="keywords" content="PyMC3,GSoC,Experiments" />
 </head>
 <body>
     <header>
@@ -41,11 +41,11 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">Jun 04, 2017</h4>
+        <div id="content">            <h4 class="date">Jul 04, 2017</h4>
 
             <article class="post">
                 <h2 class="title">
-                    <a href="https://ferrine.github.io/drafts/asvgd-sanity-check.html" rel="bookmark" title="Permanent Link to &quot;ASVGD Sanity Check&quot;">ASVGD Sanity Check</a>
+                    <a href="https://ferrine.github.io/blog/2017/07/04/asvgd-sanity-check/" rel="bookmark" title="Permanent Link to &quot;ASVGD Sanity Check&quot;">ASVGD Sanity Check</a>
                 </h2>
 
                 
@@ -58,7 +58,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here I'll give a warning about Kernelized Stein methods. In high dimensions or with small particles sample they tend to underestimate posterior variance. This can lead to undesirable results. Moreover there is no single chance to check if inference was done good enough.</p>
+<p>Here I'll give a warning about Kernelized Stein methods. In high dimensions or with small number of particles they tend to underestimate posterior variance. This can lead to undesirable results. Moreover there is no single chance to check if inference was done good enough.</p>
 
 </div>
 </div>
@@ -99,36 +99,12 @@
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="mf">0.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.</span>
 <span class="n">sd</span> <span class="o">=</span> <span class="mf">1.</span>
 <span class="k">with</span> <span class="n">pm</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
     <span class="n">pm</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="n">sd</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sd</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sd</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$\mathcal</span><span class="si">{N}</span><span class="s1">(0, 1)$ density&#39;</span><span class="p">);</span>
 </pre></div>
 
@@ -495,7 +471,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">model</span><span class="p">:</span>
@@ -514,7 +490,7 @@ AABJRU5ErkJggg==
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Average Loss = 0.0024892: 100%|██████████| 10000/10000 [00:00&lt;00:00, 11039.26it/s] 
+<pre>Average Loss = 0.0024892: 100%|██████████| 10000/10000 [00:00&lt;00:00, 15290.73it/s]
 Finished [100%]: Average Loss = 0.0025053
 </pre>
 </div>
@@ -526,24 +502,15 @@ Finished [100%]: Average Loss = 0.0025053
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_density</span><span class="p">(</span><span class="n">approx</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># helper function</span>
+<span class="k">def</span> <span class="nf">plot_density</span><span class="p">(</span><span class="n">approx</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">approx</span><span class="o">.</span><span class="n">mean</span><span class="o">.</span><span class="n">eval</span><span class="p">(),</span> <span class="n">approx</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">eval</span><span class="p">()),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">);</span>
-</pre></div>
+    
 
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">plot_density</span><span class="p">(</span><span class="n">advifit</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;advi&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sd</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">);</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
@@ -558,12 +525,12 @@ Finished [100%]: Average Loss = 0.0025053
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x10c6ff518&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x10e62ff60&gt;</pre>
 </div>
 
 </div>
@@ -1033,9 +1000,19 @@ arXiv:1704.02399</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Usage">Usage<a class="anchor-link" href="#Usage">&#182;</a></h3><p>New inference can be used just out of the box. You can pass your own Random Generator subclassed from Approximation, no <code>logq</code> is required. Here I'll always use <em>MeanField</em> distribution family as it has exact optimum.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">model</span><span class="p">:</span>
@@ -1069,17 +1046,19 @@ arXiv:1704.02399</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To make you sure all is implemented correctly, at first I'll use computationaly heavy number of particles = 1000</p>
+<p>To make you sure all is implemented correctly, at first I'll use number of particles = 1000</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tracker</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Tracker</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># super usefull for getting custom statistics</span>
+<span class="n">tracker</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Tracker</span><span class="p">(</span>
+    <span class="c1"># Let&#39;s track fitted params</span>
     <span class="n">std</span><span class="o">=</span><span class="n">inference</span><span class="o">.</span><span class="n">approx</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">eval</span><span class="p">,</span>
     <span class="n">mean</span><span class="o">=</span><span class="n">inference</span><span class="o">.</span><span class="n">approx</span><span class="o">.</span><span class="n">mean</span><span class="o">.</span><span class="n">eval</span>
 <span class="p">)</span>
@@ -1104,18 +1083,18 @@ arXiv:1704.02399</p>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 500/500 [01:18&lt;00:00,  5.35it/s]
+<pre>100%|██████████| 500/500 [01:00&lt;00:00,  8.38it/s]
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;pymc3.variational.approximations.MeanField at 0x10c247a90&gt;</pre>
+<pre>&lt;pymc3.variational.approximations.MeanField at 0x10e57aa58&gt;</pre>
 </div>
 
 </div>
@@ -1591,6 +1570,16 @@ SgghhBAiTKRYCSGEEEKEyf8DLiTY8BFb2YEAAAAASUVORK5CYII=
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Looks really cool. Fitted density curve is just the same.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2254,14 +2243,14 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Seems it's all nice. Are you sure?? Next I'll use the same training scheme with less particels but with more iterations</p>
+<p>Seems it's all nice. Are you sure? Next I'll use less particels for inference</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">model</span><span class="p">:</span>
@@ -2292,13 +2281,13 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">inference</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
     <span class="mi">20000</span><span class="p">,</span> 
     <span class="n">obj_n_mc</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="c1"># much faster</span>
-    <span class="n">obj_optimizer</span><span class="o">=</span><span class="n">pm</span><span class="o">.</span><span class="n">sgd</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=.</span><span class="mi">1</span><span class="p">),</span> <span class="c1"># we do not need to run it long</span>
+    <span class="n">obj_optimizer</span><span class="o">=</span><span class="n">pm</span><span class="o">.</span><span class="n">sgd</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=.</span><span class="mi">1</span><span class="p">),</span>
     <span class="n">total_grad_norm_constraint</span><span class="o">=.</span><span class="mi">1</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
@@ -2315,18 +2304,18 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 20000/20000 [00:24&lt;00:00, 812.61it/s] 
+<pre>100%|██████████| 20000/20000 [00:09&lt;00:00, 2010.84it/s]
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;pymc3.variational.approximations.MeanField at 0x10c8544a8&gt;</pre>
+<pre>&lt;pymc3.variational.approximations.MeanField at 0x11047d9e8&gt;</pre>
 </div>
 
 </div>
@@ -2337,7 +2326,7 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -2850,22 +2839,22 @@ RK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Something wrong with variance. Maybe it's our learning rate is too high.</p>
+<p>Something wrong with variance, it is underestimated. Maybe it's our learning rate is too high.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">model</span><span class="p">:</span>
     <span class="n">inference</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">ASVGD</span><span class="p">(</span><span class="n">pm</span><span class="o">.</span><span class="n">MeanField</span><span class="p">)</span>
 <span class="n">inference</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
-    <span class="mi">50000</span><span class="p">,</span> 
-    <span class="n">obj_n_mc</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="c1"># much faster</span>
-    <span class="n">obj_optimizer</span><span class="o">=</span><span class="n">pm</span><span class="o">.</span><span class="n">sgd</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=.</span><span class="mi">01</span><span class="p">),</span>
+    <span class="mi">50000</span><span class="p">,</span> <span class="c1"># more iterations</span>
+    <span class="n">obj_n_mc</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">obj_optimizer</span><span class="o">=</span><span class="n">pm</span><span class="o">.</span><span class="n">sgd</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=.</span><span class="mi">01</span><span class="p">),</span> <span class="c1"># smaller learning rate</span>
     <span class="n">total_grad_norm_constraint</span><span class="o">=.</span><span class="mi">01</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
@@ -2884,18 +2873,18 @@ RK5CYII=
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Users/ferres/dev/pymc3/pymc3/variational/inference.py:63: UserWarning: You are using experimental inference Operator. It requires careful choice of temperature, default is 1. Default temperature works well for low dimensional problems and for significant `n_obj_mc`. Temperature &gt; 1 gives more exploration power to algorithm, &lt; 1 leads to undesirable results. Please take it in account when looking at inference result. Posterior variance is often **underestimated** when using temperature = 1.
   self.objective = op(approx, **op_kwargs)(tf)
-100%|██████████| 50000/50000 [00:34&lt;00:00, 1463.16it/s]
+100%|██████████| 50000/50000 [00:25&lt;00:00, 1952.08it/s]
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;pymc3.variational.approximations.MeanField at 0x10e7f8128&gt;</pre>
+<pre>&lt;pymc3.variational.approximations.MeanField at 0x10e7e0320&gt;</pre>
 </div>
 
 </div>
@@ -2906,7 +2895,7 @@ RK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -3419,14 +3408,14 @@ rkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Results are the same. What about tracking parameters.</p>
+<p>Results are the same. What about tracking parameters as in the first try?</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">model</span><span class="p">:</span>
@@ -3457,7 +3446,7 @@ rkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tracker</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Tracker</span><span class="p">(</span>
@@ -3485,18 +3474,18 @@ rkJggg==
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 20000/20000 [00:14&lt;00:00, 1405.00it/s]
+<pre>100%|██████████| 20000/20000 [00:10&lt;00:00, 1901.56it/s]
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;pymc3.variational.approximations.MeanField at 0x10e7f8160&gt;</pre>
+<pre>&lt;pymc3.variational.approximations.MeanField at 0x10e0efb70&gt;</pre>
 </div>
 
 </div>
@@ -3507,7 +3496,7 @@ rkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
@@ -4113,21 +4102,20 @@ YII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Temperature-magic">Temperature magic<a class="anchor-link" href="#Temperature-magic">&#182;</a></h2><p>Previously algorithm was outlined without using temperature. Here I'll show how and why it fits there.</p>
-<p>Recall $\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)]$. That part of Stein Gradient tends to move particles to the area with higher density.</p>
-<p>And the second one $\sum^{n}_{j=1}[\nabla_{x_j} k(x_j,x)]$ moves particles away from each other.</p>
-<p>The main problem arises when we have small number of particles ($n$) or when our dimensionality is relatively high to $n$. Diversive power of the second gradient part is too weak. We can scale it up with temperature. So algorithm is changed a bit</p>
+<p>Recall
+$$\hat{\phi}^{*}(x) = \frac{1}{n}\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)]$$
+Fist part $\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)]$ of Stein Gradient tends to move particles to the area with higher density.</p>
+<p>And the second one $\sum^{n}_{j=1}[\nabla_{x_j} k(x_j,x)]$ is repulsive, it moves particles away from each other.</p>
+<p>The main problem arises when we have small number of particles ($n$) or when our dimensionality is relatively high to $n$. Repulsive power of the second gradient part is too weak. We can scale it up with temperature. So algorithm is changed a bit</p>
 <h3 id="ASVGD-with-temperature">ASVGD with temperature<a class="anchor-link" href="#ASVGD-with-temperature">&#182;</a></h3><p><em>Input:</em> Parametrized random generator $R_{\theta}$, $n$ - number of samples from $R_{\theta}$, temperature $T$</p>
 <p><em>Output:</em> $R_{\theta^{*}}$ that approximates the target distribution.</p>
 <p><strong>On each iteration</strong></p>
-<p>$
 \begin{align*}
     \Delta x_i &= \hat{\phi}^{*}(x_i) \\
     \hat{\phi}^{*}(x) &= \frac{1}{n}\sum^{n}_{j=1}[\color{red}{\frac{1}{T}}k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)] \\
     \Delta_{\theta} &= \frac{1}{n}\sum^{n}_{i=1}\Delta x_i\frac{\partial x_i}{\partial \theta} \\
     \theta &\leftarrow \theta + \epsilon \Delta_{\theta}
-\end{align*}
-$</p>
-<p>Thus higher temperature leads to more diversive posterior</p>
+\end{align*}<p>Thus higher temperature leads to more diversive posterior</p>
 
 </div>
 </div>
@@ -4137,7 +4125,7 @@ $</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Experiments">Experiments<a class="anchor-link" href="#Experiments">&#182;</a></h2><p>It is easy to set up temperature for ASVGD (as well as SVGD) in PyMC3, we can change it in experiments and plot results</p>
+<h2 id="Experiments">Experiments<a class="anchor-link" href="#Experiments">&#182;</a></h2><p>It is easy to set up temperature for ASVGD (as well as SVGD) in PyMC3, we can change it in experiments and plot the results</p>
 
 </div>
 </div>
@@ -8742,11 +8730,12 @@ d8Qe5mrs0RgAAAAASUVORK5CYII=
                 <div class="clear"></div>
 
                 <div class="info">
-                    <a href="https://ferrine.github.io/drafts/asvgd-sanity-check.html">posted at 01:05</a>
+                    <a href="https://ferrine.github.io/blog/2017/07/04/asvgd-sanity-check/">posted at 01:40</a>
                     &nbsp;&middot;&nbsp;<a href="https://ferrine.github.io/category/gsoc.html" rel="tag">gsoc</a>
                     &nbsp;&middot;
                     &nbsp;<a href="https://ferrine.github.io/tag/pymc3.html" class="tags">PyMC3</a>
                     &nbsp;<a href="https://ferrine.github.io/tag/gsoc.html" class="tags">GSoC</a>
+                    &nbsp;<a href="https://ferrine.github.io/tag/experiments.html" class="tags">Experiments</a>
                 </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
