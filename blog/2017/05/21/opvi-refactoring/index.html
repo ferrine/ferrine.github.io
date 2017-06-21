@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>In Search Of The Holy Posterior | OPVI Refactoring</title>
+    <link rel="shortcut icon" type="image/png" href="https://ferrine.github.io/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://ferrine.github.io/favicon.ico">
+    <link href="https://ferrine.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="In Search Of The Holy Posterior Full Atom Feed" />
+    <link href="https://ferrine.github.io/feeds/gsoc.atom.xml" type="application/atom+xml" rel="alternate" title="In Search Of The Holy Posterior Categories Atom Feed" />
+    <link rel="stylesheet" href="https://ferrine.github.io/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="https://ferrine.github.io/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="https://ferrine.github.io/theme/css/print.css" type="text/css" media="print" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Kochurov Maxim" />
+
+    <meta name="keywords" content="GSoC,issues" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://ferrine.github.io/">Home</a></li>
+                <li><a href="https://ferrine.github.io/tags">Tags</a></li>
+                <li><a href="https://ferrine.github.io/authors">Authors</a></li>
+                <li><a href="https://ferrine.github.io/categories">Categories</a></li>
+                <li><a href="https://ferrine.github.io/archives">Archives</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="https://ferrine.github.io/">In Search Of The Holy Posterior</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">May 21, 2017</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="https://ferrine.github.io/blog/2017/05/21/opvi-refactoring/" rel="bookmark" title="Permanent Link to &quot;OPVI Refactoring&quot;">OPVI Refactoring</a>
+                </h2>
+
+                
+                
+
+		        <p>Recently I've started working on <a href="https://arxiv.org/abs/1505.05770">normalizing flows</a>. That is a very powerful and
+expressive family of distributions. Utilizing that approach for variational inference can give very nice results.
+Moreover this inference is tractable when dealing with huge datasets as it supports minibatching.</p>
+<h2>Problems met</h2>
+<p>Recently I've started implementing Normalizing Flows but encountered problems in early stage. They did not fit
+my proposal timeline so it will be fair to speak about it here.</p>
+<p>Architecture I created this winter for variational inference supposed to be modular so implementations of new method is
+few lines of code with math for computing samples from initial distribution (<span class="math">\(z_0\)</span>) and probability (<span class="math">\(q(z)\)</span>) for
+generated posterior (<span class="math">\(z\)</span>). So not much left for a developer: there is abstract method <span class="math">\(f_{\theta} : z_0 \rightarrow z $
+that generates $z\)</span> and parametrized with <span class="math">\(\theta\)</span>. The result is approximate posterior. </p>
+<p>Unfortunately this appeared to be not suitable for sequentially constructed posteriors like normalizing flows. Thus I
+decided to do refactoring of variational module to handle that case too. See PR <a href="https://github.com/pymc-devs/pymc3/pull/2306">#2306</a>. 
+The idea is as following. You have 2 entry points: one for initial distribution and one for symbolic replacements in the model. 
+When constructing posterior one can use that symbolic matrix with initial distribution that is memoized and then memoize all intermediate 
+results to use them for creating <span class="math">\(log(q)\)</span>. That's what exactly done in this PR. I'm about to finish that and finally implement proposed methods.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="https://ferrine.github.io/blog/2017/05/21/opvi-refactoring/">posted at 12:51</a>
+                    &nbsp;&middot;&nbsp;<a href="https://ferrine.github.io/category/gsoc.html" rel="tag">gsoc</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="https://ferrine.github.io/tag/gsoc.html" class="tags">GSoC</a>
+                    &nbsp;<a href="https://ferrine.github.io/tag/issues.html" class="tags">issues</a>
+                </div>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'ferrine';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </article>            <div class="clear"></div>
+            <footer>
+                <table style="margin: 0 auto">
+                    <tr>
+                        <td style="padding:0 15px 0 15px; text-align: center"><a href="https://twitter.com/ferrine96">Twitter</a></td>
+                        <td style="padding:0 15px 0 15px; text-align: center"><a href="https://github.com/ferrine">GitHub</a></td>
+                    </tr>
+                </table>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="https://ferrine.github.io/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-98661135-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+</body>
+</html>
