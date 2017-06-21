@@ -1,5 +1,5 @@
 title: ASVGD Sanity Check
-date: 2017-07-04T01:40:00
+date: 2017-06-04T01:40:00
 status: published
 tags: PyMC3, GSoC, Experiments
 
