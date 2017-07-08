@@ -59,7 +59,7 @@ to be very interesting and hard to use. See post below</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Normalizing Flows is a rich family of distributions. They were discribed in <a href="https://arxiv.org/abs/1505.05770">arXiv:1505.05770v6</a> and their experiments prooved the importance of studying them further. Some extensions like <a href="https://arxiv.org/abs/1611.09630">arXiv:1611.09630v4</a> made computationally tractable (partially)full rank gaussians approximations for high dimansional spaces. In this notebook I'll show some tips and tricks of application normalizing flows in PyMC3</p>
+<p>Normalizing Flows is a rich family of distributions. They were discribed in <a href="https://arxiv.org/abs/1505.05770">arXiv:1505.05770v6</a> and their experiments prooved the importance of studying them further. Some extensions like <a href="https://arxiv.org/abs/1611.09630">arXiv:1611.09630v4</a> made computationally tractable (partially)full rank gaussians approximations for high dimensional spaces. In this notebook I'll show some tips and tricks for normalizing flows in PyMC3</p>
 
 </div>
 </div>
@@ -89,11 +89,11 @@ to be very interesting and hard to use. See post below</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Theory">Theory<a class="anchor-link" href="#Theory">&#182;</a></h2><p>Normalizing flow is a series of invertible transformations on initial distribution.</p>
-$$z_K = f_K ◦ \dots ◦ f_2 ◦ f_1(z_0) $$<p>In that case we can compute tractable density for the flow.</p>
-$$\ln q_K(z_K) = \ln q_0(z_0) - \sum_{k=1}^{K}\ln \left|\frac{\partial f_k}{\partial z_{k-1}}\right|$$<p>Every $f_k$ here is a parametric function with defined dererminant. We can choose every step here. For example the mor simple flow is an affine transform:</p>
+<h2 id="Theory">Theory<a class="anchor-link" href="#Theory">&#182;</a></h2><p>Normalizing Flow is a series of invertible transformations on initial distribution.</p>
+$$z_K = f_K \circ \dots \circ f_2 \circ f_1(z_0) $$<p>In that case we can compute tractable density for the flow.</p>
+$$\ln q_K(z_K) = \ln q_0(z_0) - \sum_{k=1}^{K}\ln \left|\frac{\partial f_k}{\partial z_{k-1}}\right|$$<p>Every $f_k$ here is a parametric function with defined determinant. We can choose every step here. For example the mor simple flow is an affine transform:</p>
 $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approximation if $z_0 \sim \mathcal{N}(0, 1)$</p>
-<h2 id="Flow-Formulas">Flow Formulas<a class="anchor-link" href="#Flow-Formulas">&#182;</a></h2><p>In PyMC3 there is a flexible way to define flows with formulas. We now have 5 of them:</p>
+<h2 id="Flow-Formulas">Flow Formulas<a class="anchor-link" href="#Flow-Formulas">&#182;</a></h2><p>In PyMC3 there is a flexible way to define flows with formulas. We have 5 of them by the moment:</p>
 <ul>
 <li>Loc (<code>loc</code>): $z' = z + \mu$</li>
 <li>Scale (<code>scale</code>): $z' = \sigma * z$</li>
@@ -110,8 +110,8 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Formula can be written as a string, e.g. <code>'scale-loc'</code>, <code>'scale-hh*4-loc'</code>, <code>'panar*10'</code>. Every step is separated with <code>'-'</code>, repeated flow is marked with <code>'*'</code> produsing <code>'flow*repeats'</code>.</p>
-<p>In PyMC3 flow interface there is a special class to freate flow-based approximation, <code>NormalizingFlow</code>. And an inference method that has underlying flow posterior <code>NF</code> that is just an abbreviation for <code>NormalizingFlow</code>. We also use abbreviations for <code>ADVI</code>, <code>SVGD</code> so it seems convinient to have a short inference name.</p>
+<p>Formula can be written as a string, e.g. <code>'scale-loc'</code>, <code>'scale-hh*4-loc'</code>, <code>'panar*10'</code>. Every step is separated with <code>'-'</code>, repeated flow is marked with <code>'*'</code> producing <code>'flow*repeats'</code>.</p>
+<p>There is a special class to create flow-based approximation in PyMC3 named <code>NormalizingFlow</code>. And an inference method that has underlying flow posterior <code>NF</code>, that is just an abbreviation for <code>NormalizingFlow</code>. We also use abbreviations for <code>ADVI</code> and <code>SVGD</code> so it seems convinient to have a short inference name and long approximation one.</p>
 
 </div>
 </div>
@@ -121,7 +121,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pm</span><span class="o">.</span><span class="n">NormalizingFlow</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pm</span><span class="o">.</span><span class="n">NormalizingFlow</span>  <span class="c1"># is Appriximation</span>
 </pre></div>
 
 </div>
@@ -152,7 +152,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pm</span><span class="o">.</span><span class="n">NF</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pm</span><span class="o">.</span><span class="n">NF</span>  <span class="c1"># is Inference</span>
 </pre></div>
 
 </div>
