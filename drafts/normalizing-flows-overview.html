@@ -91,14 +91,14 @@ to be very interesting and hard to use. See post below</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Theory">Theory<a class="anchor-link" href="#Theory">&#182;</a></h2><p>Normalizing Flow is a series of invertible transformations on initial distribution.</p>
 $$z_K = f_K \circ \dots \circ f_2 \circ f_1(z_0) $$<p>In that case we can compute tractable density for the flow.</p>
-$$\ln q_K(z_K) = \ln q_0(z_0) - \sum_{k=1}^{K}\ln \left|\frac{\partial f_k}{\partial z_{k-1}}\right|$$<p>Every $f_k$ here is a parametric function with defined determinant. We can choose every step here. For example the mor simple flow is an affine transform:</p>
+$$\ln q_K(z_K) = \ln q_0(z_0) - \sum_{k=1}^{K}\ln \left|\frac{\partial f_k}{\partial z_{k-1}}\right|$$<p>Every $f_k$ here is a parametric function with defined determinant. We can choose every step here. For example the simplest flow is an affine transform:</p>
 $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approximation if $z_0 \sim \mathcal{N}(0, 1)$</p>
 <h2 id="Flow-Formulas">Flow Formulas<a class="anchor-link" href="#Flow-Formulas">&#182;</a></h2><p>In PyMC3 there is a flexible way to define flows with formulas. We have 5 of them by the moment:</p>
 <ul>
 <li>Loc (<code>loc</code>): $z' = z + \mu$</li>
 <li>Scale (<code>scale</code>): $z' = \sigma * z$</li>
 <li>Planar (<code>planar</code>): $z' = z + u * \tanh(w^T z + b)$</li>
-<li>Radial (<code>radial</code>): $z' = z + \beta (\alpha + (z-z_r))^{-1}(z-z_r)$</li>
+<li>Radial (<code>radial</code>): $z' = z + \beta (\alpha + ||z-z_r||)^{-1}(z-z_r)$</li>
 <li>Householder (<code>hh</code>): $z' = H z$</li>
 </ul>
 
@@ -248,7 +248,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Full-Rank-Normal-connectivity">Full Rank Normal connectivity<a class="anchor-link" href="#Full-Rank-Normal-connectivity">&#182;</a></h3><p>We can get full rank model with dence covariance matrix using householder flows. Note that one <code>hh</code> flow ads exactly one rank to covariance matrix. HH flows are volume preserving flows and thus we need to change scaling if we expect out posterior to have not unit variance for latents. After we created covariance with a combination of <code>'scale-hh*K'</code> we then add location with <code>loc</code> flow.</p>
+<h3 id="Full-Rank-Normal-connectivity">Full Rank Normal connectivity<a class="anchor-link" href="#Full-Rank-Normal-connectivity">&#182;</a></h3><p>We can get full rank model with dence covariance matrix using householder flows. Note that one <code>hh</code> flow adds exactly one rank to covariance matrix so for full rank we need <code>K=ndim</code> <code>hh</code> flows . HH flows are volume preserving flows and thus we need to change scaling if we expect out posterior to have not unit variance for latents. After we created covariance with a combination of <code>'scale-hh*K'</code> we then add location with <code>loc</code> flow.</p>
 
 </div>
 </div>
@@ -289,7 +289,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>More interesting case is when we do not expect a lot of interactions within posterior. So If our covariance is expected to be sparse we can restrict it to be so by hand defining low rank approximation family.</p>
+<p>More interesting case is when we do not expect a lot of interactions within posterior. So If our covariance is expected to be sparse we can restrict it to be so by hand defining low rank approximation family. We reduce number of computations as well.</p>
 
 </div>
 </div>
@@ -371,7 +371,11 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Planar-and-Radial-Flows">Planar and Radial Flows<a class="anchor-link" href="#Planar-and-Radial-Flows">&#182;</a></h3><p>Planars are useful to split incomming distribution into two parts. With them one can get multimodal distribution. The same can be done with Radial flow. It changes density around specific reference point.</p>
+<h3 id="Planar-and-Radial-Flows">Planar and Radial Flows<a class="anchor-link" href="#Planar-and-Radial-Flows">&#182;</a></h3><ul>
+<li>Planar (<code>planar</code>): $z' = z + u * \tanh(w^T z + b)$</li>
+<li>Radial (<code>radial</code>): $z' = z + \beta (\alpha + ||z-z_r||)^{-1}(z-z_r)$</li>
+</ul>
+<p>Planars are useful to split incomming distribution into two parts. With them one can get multimodal distribution. The same can be done with Radial flow. It changes density around specific reference point.</p>
 
 </div>
 </div>
@@ -925,6 +929,16 @@ lAAAAABJRU5ErkJggg==
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="NUTS">NUTS<a class="anchor-link" href="#NUTS">&#182;</a></h3><p>Let's use NUTS first. Just to have a look how good is it's approximation</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
@@ -1345,7 +1359,7 @@ TCAiIskwhIiISDIMISIikgxDiIiIJMMQIiIiyTCEiIhIMv8fiWsqO0qAtoMAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="First-try">First try<a class="anchor-link" href="#First-try">&#182;</a></h3><p>Let's use naive defaults and see what we'll get</p>
+<h3 id="First-try-with-flows">First try with flows<a class="anchor-link" href="#First-try-with-flows">&#182;</a></h3><p>To make a first naive try with flows we do not need a lot of them. Let's use naive defaults with 2 planar flows and see what we'll get</p>
 
 </div>
 </div>
@@ -1359,6 +1373,7 @@ TCAiIskwhIiISDIMISIikgxDiIiIJMMQIiIiyTCEiIhIMv8fiWsqO0qAtoMAAAAASUVORK5CYII=
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">2016</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">pot1m</span><span class="p">:</span>
     <span class="n">inference</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">NF</span><span class="p">(</span><span class="s1">&#39;planar*2&#39;</span><span class="p">,</span> <span class="n">jitter</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">## Plotting starting distribution</span>
 <span class="n">dftrace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">trace_to_dataframe</span><span class="p">(</span><span class="n">inference</span><span class="o">.</span><span class="n">approx</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">dftrace</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dftrace</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">);</span>
 </pre></div>
@@ -1686,6 +1701,16 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Tracking-gradients">Tracking gradients<a class="anchor-link" href="#Tracking-gradients">&#182;</a></h4><p>It is not only interesting to track parameters but gradients too. In this setup different sampling points can give different gradients as single sampled point tends to collapse to a mode.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2251,7 +2276,7 @@ kcz+H+kHm2mEiPnCAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Loss history is not very informative here. Tracker stars can be much more interesting</p>
+<p>Loss history is not very informative here. Tracker stats can be much more interesting</p>
 
 </div>
 </div>
@@ -18670,7 +18695,7 @@ paSk4PHHH5ejNCJNYydERESK4cQEIiJSDEOIiIgUwxAiIiLFMISIiEgxDCEiIlIMQ4iIiBTz/8Gc
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Inference is very unstable, dominant mode has changed. So be carefull in learning your flows</p>
+<p>Inference is very unstable, variance of gradients is relativelly high to parameters. Dominant mode has changed. So be carefull in learning your flows</p>
 
 </div>
 </div>
@@ -19522,7 +19547,7 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we see that flows are able to catch multimodality structure of given posterior but in this case they are hard to fit as we have multimodal distribution. Initial point matters a lot in general case.</p>
+<p>Now we see that flows are able to catch multimodality structure of given posterior but in this case they are hard to fit as we have multimodal distribution. Initial point matters a lot in general multimodal case.</p>
 
 </div>
 </div>
