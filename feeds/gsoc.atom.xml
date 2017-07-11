@@ -8,7 +8,7 @@ to be very interesting and hard to use. See post below&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Normalizing Flows is a rich family of distributions. They were discribed in &lt;a href="https://arxiv.org/abs/1505.05770"&gt;arXiv:1505.05770v6&lt;/a&gt; and their experiments prooved the importance of studying them further. Some extensions like &lt;a href="https://arxiv.org/abs/1611.09630"&gt;arXiv:1611.09630v4&lt;/a&gt; made computationally tractable (partially)full rank gaussians approximations for high dimensional spaces. In this notebook I'll show some tips and tricks for normalizing flows in PyMC3&lt;/p&gt;
+&lt;p&gt;Normalizing Flows is a rich family of distributions. They were described in &lt;a href="https://arxiv.org/abs/1505.05770"&gt;arXiv:1505.05770v6&lt;/a&gt; and their experiments prooved the importance of studying them further. Some extensions like &lt;a href="https://arxiv.org/abs/1611.09630"&gt;arXiv:1611.09630v4&lt;/a&gt; made computationally tractable (partially)full rank gaussians approximations for high dimensional spaces. In this notebook I'll show some tips and tricks for normalizing flows in PyMC3&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -279,7 +279,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;For initial paramenter we did not yet choose careful defaults and use random init with jitter.&lt;/p&gt;
+&lt;p&gt;For initial parameter we did not yet choose careful defaults and use random init with jitter.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -324,7 +324,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;li&gt;Planar (&lt;code&gt;planar&lt;/code&gt;): $z' = z + u * \tanh(w^T z + b)$&lt;/li&gt;
 &lt;li&gt;Radial (&lt;code&gt;radial&lt;/code&gt;): $z' = z + \beta (\alpha + ||z-z_r||)^{-1}(z-z_r)$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Planars are useful to split incomming distribution into two parts. With them one can get multimodal distribution. The same can be done with Radial flow. It changes density around specific reference point.&lt;/p&gt;
+&lt;p&gt;Planars are useful to split incoming distribution into two parts. With them one can get multimodal distribution. The same can be done with Radial flow. It changes density around specific reference point.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -860,7 +860,7 @@ lAAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Reprodusing-first-potential-function"&gt;Reprodusing first potential function&lt;a class="anchor-link" href="#Reprodusing-first-potential-function"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="Reproducing-first-potential-function"&gt;Reproducing first potential function&lt;a class="anchor-link" href="#Reproducing-first-potential-function"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

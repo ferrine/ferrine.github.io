@@ -59,7 +59,7 @@ to be very interesting and hard to use. See post below</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Normalizing Flows is a rich family of distributions. They were discribed in <a href="https://arxiv.org/abs/1505.05770">arXiv:1505.05770v6</a> and their experiments prooved the importance of studying them further. Some extensions like <a href="https://arxiv.org/abs/1611.09630">arXiv:1611.09630v4</a> made computationally tractable (partially)full rank gaussians approximations for high dimensional spaces. In this notebook I'll show some tips and tricks for normalizing flows in PyMC3</p>
+<p>Normalizing Flows is a rich family of distributions. They were described in <a href="https://arxiv.org/abs/1505.05770">arXiv:1505.05770v6</a> and their experiments prooved the importance of studying them further. Some extensions like <a href="https://arxiv.org/abs/1611.09630">arXiv:1611.09630v4</a> made computationally tractable (partially)full rank gaussians approximations for high dimensional spaces. In this notebook I'll show some tips and tricks for normalizing flows in PyMC3</p>
 
 </div>
 </div>
@@ -330,7 +330,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For initial paramenter we did not yet choose careful defaults and use random init with jitter.</p>
+<p>For initial parameter we did not yet choose careful defaults and use random init with jitter.</p>
 
 </div>
 </div>
@@ -375,7 +375,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 <li>Planar (<code>planar</code>): $z' = z + u * \tanh(w^T z + b)$</li>
 <li>Radial (<code>radial</code>): $z' = z + \beta (\alpha + ||z-z_r||)^{-1}(z-z_r)$</li>
 </ul>
-<p>Planars are useful to split incomming distribution into two parts. With them one can get multimodal distribution. The same can be done with Radial flow. It changes density around specific reference point.</p>
+<p>Planars are useful to split incoming distribution into two parts. With them one can get multimodal distribution. The same can be done with Radial flow. It changes density around specific reference point.</p>
 
 </div>
 </div>
@@ -911,7 +911,7 @@ lAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reprodusing-first-potential-function">Reprodusing first potential function<a class="anchor-link" href="#Reprodusing-first-potential-function">&#182;</a></h2>
+<h2 id="Reproducing-first-potential-function">Reproducing first potential function<a class="anchor-link" href="#Reproducing-first-potential-function">&#182;</a></h2>
 </div>
 </div>
 </div>
