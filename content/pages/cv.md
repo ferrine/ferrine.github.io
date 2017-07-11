@@ -9,7 +9,7 @@ Maxim Kochurov
 
 **About me**
 
-I'm a student from Moscow State University, Economics Faculty. I study Bayesian statistics 
+I'm a student from Moscow State University, economics department. I study Bayesian statistics 
 in spare time and contribute to [PyMC3](https://github.com/pymc-devs/pymc3). 
 
 I started this journey in 2016 and it was very exciting. I went through tons of papers 
