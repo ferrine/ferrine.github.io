@@ -3,7 +3,7 @@ title: CV
 Maxim Kochurov
 --------------
 
-**Current Position**: *Junior Data Scientist* @ [Yandex Data Factory](https://yandexdatafactory.com/)
+**Current Position**: *Data Scientist* @ [Yandex Data Factory](https://yandexdatafactory.com/)
 
 **Fields of interest**: Bayesian statistics, variational inference, machine learning. 
 
