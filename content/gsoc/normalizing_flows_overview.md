@@ -1,5 +1,6 @@
 title: Normalizing Flows Overview
-date: 2017-07-10T00:51:00
+date: 2017-07-11T07:58:00
+status: published
 tags: GSoC, features
 
 One of milestones in my Google Summer of Code was implementing Normalizing Flows. They appeared 
