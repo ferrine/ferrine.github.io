@@ -45,7 +45,6 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 DEFAULT_METADATA = {
-    'status': 'draft',
     'add_comments': True
 }
 
