@@ -44,4 +44,4 @@ This group distribution can be either simple FullRank/MeanField or more complex 
 require a lot of costly math to compute samples, density and gradients. Proposed approach limits number of interactions and thus
 reduces computational overhead. As number of groups can be chosen by hand this core idea opens a way to deal with trade-off between
 computational cost and captured interactions. I found no studies about such approach so I coin this term as Grouped Variational 
-Inference (GVI), see soon in PyMC3.
+Inference (GVI), see soon in [PyMC3](https://github.com/pymc-devs/pymc3).
