@@ -25,7 +25,7 @@ That can be written in the following form:
 -   $p(z|D)$ - true posterior distribution
 -   $K$ - number of grouped posterior components
 -   $\mathcal{G}_k$ indices of grouped components
--   $z_{[k]}$ slice from $z$ that includes all components from $\mathcal{G}_k$
+-   $z_{[k]}$ slice of $z$ that includes all components from $\mathcal{G}_k$
 -   $q_{k}(z_{[k]})$ - distribution for group $k$
 -   $q(z) = \prod_{k=1}^K q_{k}(z_{[k]})$ - posterior approximation
 
@@ -33,7 +33,7 @@ That can be written in the following form:
 Now having the following notation we can formulate our interactions in the structured way. We have exactly 2 groups and distributions:
 
 1. $z_{[1]} \sim \mathcal{N}(\mu_1, diag(\sigma_1))$
-2. $z_{[2]} = \mathcal{N}(\mu_2, \Sigma_2)$
+2. $z_{[2]} \sim \mathcal{N}(\mu_2, \Sigma_2)$
 
 Having them we can sample variables group wise and construct $q(z)$.
 
