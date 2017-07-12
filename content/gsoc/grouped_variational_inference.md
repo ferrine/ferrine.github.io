@@ -39,7 +39,7 @@ Having them we can sample variables group wise and construct $q(z)$.
 
 ## Extensions
 
-In notations we did not specified the form of group distribution. So we are eligible to introduce any tractable density there.
+In notations we did not specify the form of group distribution. So we are free to introduce any tractable density there.
 This group distribution can be either simple FullRank/MeanField or more complex one such as NormalizingFlow. Usually interactions
 require a lot of costly math to compute samples, density and gradients. Proposed approach limits number of interactions and thus
 reduces computational overhead. As number of groups can be chosen by hand this core idea opens a way to deal with trade-off between
