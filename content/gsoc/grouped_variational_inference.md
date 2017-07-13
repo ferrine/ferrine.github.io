@@ -3,10 +3,11 @@ date: 2017-07-13T08:06:00
 status: published
 tags: PyMC3, GSoC, Ideas
 
+## Motivation
 One of the core motivations behind non-MeanField variational approximations is creating interactions between
 latent variables as fully factorized Gaussian does not capture this important property of posterior distribution.
 
-One of the possible ways to relax this condition and introduce full rank gaussian approximation with dense covariance matrix, parametrized
+Common way to relax this condition is to introduce full rank gaussian approximation with dense covariance matrix, parametrized
 with Cholesky decomposition. But this parametrization is computationally expensive for large dimensions. So we meet another
 limitation in terms of computational tractability. One can decide to use block matrix for covariance to hold interactions between 
 selected latent variables. This is for sure great idea and I believe it will remain tractable even for deep neural networks.
