@@ -1,5 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>In Search Of The Holy Posterior - gsoc</title><link href="https://ferrine.github.io/" rel="alternate"></link><link href="https://ferrine.github.io/feeds/gsoc.atom.xml" rel="self"></link><id>https://ferrine.github.io/</id><updated>2017-07-11T07:58:00+03:00</updated><entry><title>Normalizing Flows Overview</title><link href="https://ferrine.github.io/blog/2017/07/11/normalizing-flows-overview/" rel="alternate"></link><published>2017-07-11T07:58:00+03:00</published><updated>2017-07-11T07:58:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-07-11:/blog/2017/07/11/normalizing-flows-overview/</id><summary type="html">One of milestones in my Google Summer of Code was implementing Normalizing Flows. They appeared 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>In Search Of The Holy Posterior - gsoc</title><link href="https://ferrine.github.io/" rel="alternate"></link><link href="https://ferrine.github.io/feeds/gsoc.atom.xml" rel="self"></link><id>https://ferrine.github.io/</id><updated>2017-07-13T08:06:00+03:00</updated><entry><title>Grouped Variational Inference</title><link href="https://ferrine.github.io/blog/2017/07/13/grouped-variational-inference/" rel="alternate"></link><published>2017-07-13T08:06:00+03:00</published><updated>2017-07-13T08:06:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-07-13:/blog/2017/07/13/grouped-variational-inference/</id><summary type="html">One of the core motivations behind non-MeanField variational approximations is creating interactions between
+latent variables as fully factorized Gaussian does not capture this important property of posterior distribution. One of
+the possible ways to relax this condition and introduce full rank gaussian approximation with dense covariance matrix, parametrized
+with Cholesky decomposition. But this parametrization is computationally expensive for large dimensions. So we meet another
+limitation in terms of computational tractability. One can decide to use block matrix for covariance to hold interactions between 
+selected latent variables. This is for sure great idea and I believe it will remain tractable even for deep neural networks.</summary><content type="html">&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;One of the core motivations behind non-MeanField variational approximations is creating interactions between
+latent variables as fully factorized Gaussian does not capture this important property of posterior distribution. One of
+the possible ways to relax this condition and introduce full rank gaussian approximation with dense covariance matrix, parametrized
+with Cholesky decomposition. But this parametrization is computationally expensive for large dimensions. So we meet another
+limitation in terms of computational tractability. One can decide to use block matrix for covariance to hold interactions between 
+selected latent variables. This is for sure great idea and I believe it will remain tractable even for deep neural networks.&lt;/p&gt;
+&lt;h2&gt;Reformulation&lt;/h2&gt;
+&lt;p&gt;Let's think it over a little more. The latter idea is to use sparse covariance matrix. But what about reformulation of this statement?
+We can treat this group of latent variables separately. For simplicity we'll have 2 groups: one stands for interactions, the other
+does not have them at all. Using FullRank approximation for the first group and MeanField for the other one we'll get the same
+parametrization as we decided to have earlier. &lt;/p&gt;
+&lt;h3&gt;Notations&lt;/h3&gt;
+&lt;p&gt;That can be written in the following form:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(D\)&lt;/span&gt; - latent space dimensionality&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(p(z|D)\)&lt;/span&gt; - true posterior distribution&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(K\)&lt;/span&gt; - number of grouped posterior components&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\mathcal{G}_k\)&lt;/span&gt; indices of grouped components&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(z_{[k]}\)&lt;/span&gt; slice of &lt;span class="math"&gt;\(z\)&lt;/span&gt; that includes all components from &lt;span class="math"&gt;\(\mathcal{G}_k\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(q_{k}(z_{[k]})\)&lt;/span&gt; - distribution for group &lt;span class="math"&gt;\(k\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(q(z) = \prod_{k=1}^K q_{k}(z_{[k]})\)&lt;/span&gt; - posterior approximation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now having the following notation we can formulate our interactions in the structured way. We have exactly 2 groups and distributions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(z_{[1]} \sim \mathcal{N}(\mu_1, diag(\sigma_1))\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(z_{[2]} \sim \mathcal{N}(\mu_2, \Sigma_2)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Having them we can sample variables group wise and construct &lt;span class="math"&gt;\(q(z)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Extensions&lt;/h2&gt;
+&lt;p&gt;In notations we did not specify the form of group distribution. So we are free to introduce any tractable density there.
+This group distribution can be either simple FullRank/MeanField or more complex one such as NormalizingFlow. Usually interactions
+require a lot of costly math to compute samples, density and gradients. Proposed approach limits number of interactions and thus
+reduces computational overhead. As number of groups can be chosen by hand this core idea opens a way to deal with trade-off between
+computational cost and captured interactions. I found no studies about such approach so I coin this term as Grouped Variational 
+Inference (GVI), see soon in &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="Ideas"></category></entry><entry><title>Normalizing Flows Overview</title><link href="https://ferrine.github.io/blog/2017/07/11/normalizing-flows-overview/" rel="alternate"></link><published>2017-07-11T07:58:00+03:00</published><updated>2017-07-11T07:58:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-07-11:/blog/2017/07/11/normalizing-flows-overview/</id><summary type="html">One of milestones in my Google Summer of Code was implementing Normalizing Flows. They appeared 
 to be very interesting and hard to use. See post below</summary><content type="html">&lt;p&gt;One of milestones in my Google Summer of Code was implementing Normalizing Flows. They appeared 
 to be very interesting and hard to use. See post below&lt;/p&gt;
 &lt;p&gt;
