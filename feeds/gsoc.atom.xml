@@ -34,8 +34,8 @@ parametrization as we decided to have earlier. &lt;/p&gt;
 This group distribution can be either simple FullRank/MeanField or more complex one such as NormalizingFlow. Usually interactions
 require a lot of costly math to compute samples, density and gradients. Proposed approach limits number of interactions and thus
 reduces computational overhead. As number of groups can be chosen by hand this core idea opens a way to deal with trade-off between
-computational cost and captured interactions. I finally found some studies about current approach &lt;a href="arxiv.org/abs/1506.03159"&gt;Copula variational inference&lt;/a&gt; and
-&lt;a href="https://arxiv.org/abs/1404.4114"&gt;Structured Stochastic Variational Inference&lt;/a&gt;.
+computational cost and captured interactions. I finally found some studies about current approach:
+&lt;a href="https://arxiv.org/abs/1404.4114"&gt;Structured Stochastic Variational Inference&lt;/a&gt; and &lt;a href="https://arxiv.org/abs/1506.03159"&gt;Copula variational inference&lt;/a&gt;.
 So see it soon in &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a&gt;.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
