@@ -1,6 +1,6 @@
 title: Grouped Variational Inference
-date: 2017-07-13T01:40:00
-status: draft
+date: 2017-07-13T08:06:00
+status: published
 tags: PyMC3, GSoC, Ideas
 
 ## Motivation
