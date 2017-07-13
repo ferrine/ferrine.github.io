@@ -43,5 +43,6 @@ In notations we did not specify the form of group distribution. So we are free t
 This group distribution can be either simple FullRank/MeanField or more complex one such as NormalizingFlow. Usually interactions
 require a lot of costly math to compute samples, density and gradients. Proposed approach limits number of interactions and thus
 reduces computational overhead. As number of groups can be chosen by hand this core idea opens a way to deal with trade-off between
-computational cost and captured interactions. I found no studies about such approach so I coin this term as Grouped Variational 
-Inference (GVI), see soon in [PyMC3](https://github.com/pymc-devs/pymc3).
+computational cost and captured interactions. I finally found some studies about such approach [Copula variational inference](arxiv.org/abs/1506.03159) and
+[Structured Stochastic Variational Inference](https://arxiv.org/abs/1404.4114).
+So see it soon in [PyMC3](https://github.com/pymc-devs/pymc3).
