@@ -17,4 +17,6 @@ PyMC3 has state-of-the-art VI algorithms for both large and small models. You ca
 [documentation](http://docs.pymc.io/en/latest/examples.html#variational-inference)
 
 [The second](https://github.com/pymc-devs/pymc3/pull/2416) implements Structured Variational Inference not possible before. It is not ready for merge as it has to be
-reviewed a bit more and a lot of examples have to be rerun. That will take some more time for sure.
+reviewed a bit more and a lot of examples have to be rerun. That will take some more time for sure. It also allows to create
+arbitrary variational distributions in future for individual groups of variables. Gubmel Softmax reparametrization might suit extremely well for
+Deep Learning modern approaches. I am sure that PyMC3 will make Bayesian Deep Learining more accessible.
