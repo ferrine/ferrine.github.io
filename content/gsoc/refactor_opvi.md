@@ -1,7 +1,7 @@
 title: OPVI Refactoring
 date: 2017-06-21T12:51:00
 status: published
-tags: GSoC, issues
+tags: PyMC3, GSoC, issues
 
 Recently I've started working on [normalizing flows](https://arxiv.org/abs/1505.05770). That is a very powerful and
 expressive family of distributions. Utilizing that approach for variational inference can give very nice results.
