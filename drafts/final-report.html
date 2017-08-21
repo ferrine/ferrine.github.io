@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>In Search Of The Holy Posterior | Autumn is Coming</title>
+    <title>In Search Of The Holy Posterior | Final Report</title>
     <link rel="shortcut icon" type="image/png" href="https://ferrine.github.io/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://ferrine.github.io/favicon.ico">
     <link href="https://ferrine.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="In Search Of The Holy Posterior Full Atom Feed" />
@@ -42,35 +42,60 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">Jul 13, 2017</h4>
+        <div id="content">            <h4 class="date">Aug 19, 2017</h4>
 
             <article class="post">
                 <h2 class="title">
-                    <a href="https://ferrine.github.io/drafts/autumn-is-coming.html" rel="bookmark" title="Permanent Link to &quot;Autumn is Coming&quot;">Autumn is Coming</a>
+                    <a href="https://ferrine.github.io/drafts/final-report.html" rel="bookmark" title="Permanent Link to &quot;Final Report&quot;">Final Report</a>
                 </h2>
 
                 
                 
 
-		        <p>The summer has passed and a lot of things have been done. I still have some work in progress that I did not manage
+		        <h2>Impressions</h2>
+<p>The summer has passed and a lot of things have been done. I still have some work in progress that I did not manage
 to finish in time. This work is devoted to Structured Variational Inference that was impossible before. I found
 this work very challenging and it took a lot of time to get the right direction and inspiration.</p>
 <p>The road was quite long and I was developing new architecture for about 2 weeks. No single line of code was written there.
 When I finally got the idea and understanding of what exactly is needed it was hard to stop coding. That's how inspiration
 is important, any challenging problem can be solved. I have to thank my mentors who guided me through this journey.
 I'm planning to continue further contributions in PyMC3 Variational Inference and improve it even more.</p>
-<p>By now I've finished 1 huge <a href="https://github.com/pymc-devs/pymc3/pull/2362">PR</a> implementing Normalizing Flows. Now
+<h2>Normalising FLows</h2>
+<p>By now I've finished 1 huge PR (<a href="https://github.com/pymc-devs/pymc3/pull/2362">pymc3/#2362</a>) implementing Normalizing Flows. Now
 PyMC3 has state-of-the-art VI algorithms for both large and small models. You can see how it works in our
-<a href="http://docs.pymc.io/en/latest/examples.html#variational-inference">documentation</a></p>
-<p><a href="https://github.com/pymc-devs/pymc3/pull/2416">The second</a> implements Structured Variational Inference not possible before. It is not ready for merge as it has to be
+<a href="http://docs.pymc.io/en/latest/examples.html#variational-inference">documentation</a>. The work that is done here:</p>
+<ul>
+<li>new <code>flows.py</code> module created</li>
+<li>refactored <code>pm.variational</code> to support Normalizing Flows </li>
+<li>
+<p>implemented the following flow families</p>
+<ul>
+<li>Planar flow</li>
+<li>Radial flow</li>
+<li>Householder flow</li>
+<li>Loc flow</li>
+<li>Scale flow</li>
+</ul>
+</li>
+<li>
+<p>created a way to combine flows in formulas</p>
+</li>
+</ul>
+<h2>Structured Variational Inference</h2>
+<p>The second (<a href="https://github.com/pymc-devs/pymc3/pull/2416">pymc3/#2416</a>) implements Structured Variational Inference not possible before. It is not ready for merge as it has to be
 reviewed a bit more and a lot of examples have to be rerun. That will take some more time for sure. It also allows to create
 arbitrary variational distributions in future for individual groups of variables. One of that ideas is Gubmel Softmax reparametrization that
-is an approach to handle discreteness property and ability to backpropagate the underlying probabilities. It might
-suit extremely well for Deep Learning modern approaches.</p>
+is an approach to relax discreteness and be able to backpropagate the underlying probabilities. It might
+suit extremely well for modern deep learning approaches. The scope of this PR is as following</p>
+<p>[+] refactoring <code>pm.variational</code>
+[+] rewrite all approximations as groups
+[+] support local approximations everywhere
+[ ] tests/debug
+[ ] rerun notebooks</p>
                 <div class="clear"></div>
 
                 <div class="info">
-                    <a href="https://ferrine.github.io/drafts/autumn-is-coming.html">posted at 08:06</a>
+                    <a href="https://ferrine.github.io/drafts/final-report.html">posted at 21:06</a>
                     &nbsp;&middot;&nbsp;<a href="https://ferrine.github.io/category/gsoc.html" rel="tag">gsoc</a>
                     &nbsp;&middot;
                     &nbsp;<a href="https://ferrine.github.io/tag/pymc3.html" class="tags">PyMC3</a>
