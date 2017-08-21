@@ -4,7 +4,7 @@ status: draft
 tags: PyMC3, GSoC
 
 ## Impressions
-The summer has passed and a lot of things have been done. I still have some work in progress that I did not manage
+The summer has passed and a lot of things are done. There is still some work in progress that I did not manage
 to finish in time. This work is devoted to Structured Variational Inference that was impossible before. I found
 this work very challenging and it took a lot of time to get the right direction and inspiration.
 
