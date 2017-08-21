@@ -1,5 +1,5 @@
 title: Final Report
-date: 2017-08-19T21:06:00
+date: 2017-08-21T00:00:01
 status: draft
 tags: PyMC3, GSoC
 
