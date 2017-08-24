@@ -6,14 +6,14 @@ tags: PyMC3, GSoC
 ## Impressions
 The summer has passed and a lot of things are done. Some of them were not outlined in the original GSoC proposal. There is still some work in progress that I did not manage
 to finish in time. This work is devoted to Structured Variational Inference that was impossible before. I found
-this work very challenging and it took a lot of time to get the right direction and inspiration.
+this very challenging and it took a lot of time to get the right direction and inspiration.
 
 The road was quite long and I was developing new architecture for about 2 weeks. No single line of code was written there.
 When I finally got the idea and understanding of what exactly is needed it was hard to stop coding. That's how inspiration
 is important, any challenging problem can be solved. I have to thank my mentors who guided me through this journey.
 I'm planning to continue further contributions in PyMC3 Variational Inference and improve it even more.
 
-## Normalising FLows
+## Normalising Flows
 By now I've finished 2 huge PRs ([pymc3/#2306](https://github.com/pymc-devs/pymc3/pull/2306), [pymc3/#2362](https://github.com/pymc-devs/pymc3/pull/2362)) implementing Normalizing Flows. Now
 PyMC3 has state-of-the-art VI algorithms for both large and small models. You can see how it works in our
 [documentation](http://docs.pymc.io/en/latest/examples.html#variational-inference). The work that is done here:
