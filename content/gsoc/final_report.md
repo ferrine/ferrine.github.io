@@ -1,6 +1,6 @@
 title: Final Report
-date: 2017-08-21T00:00:01
-status: draft
+date: 2017-08-24T12:46:01
+status: published
 tags: PyMC3, GSoC
 
 ## Impressions
