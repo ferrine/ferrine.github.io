@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>In Search Of The Holy Posterior</title><link href="https://ferrine.github.io/" rel="alternate"></link><link href="https://ferrine.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ferrine.github.io/</id><updated>2017-08-24T12:46:01+03:00</updated><entry><title>Final Report</title><link href="https://ferrine.github.io/blog/2017/08/24/final-report/" rel="alternate"></link><published>2017-08-24T12:46:01+03:00</published><updated>2017-08-24T12:46:01+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-08-24:/blog/2017/08/24/final-report/</id><summary type="html">The summer has passed and a lot of things are done. Some of them were not outlined in the original GSoC proposal. There is still some work in progress that I did not manage
 to finish in time. This work is devoted to Structured Variational Inference that was impossible before. I found
-this work very challenging and it took a lot of time to get the right direction and inspiration.</summary><content type="html">&lt;h2&gt;Impressions&lt;/h2&gt;
+this very challenging and it took a lot of time to get the right direction and inspiration.</summary><content type="html">&lt;h2&gt;Impressions&lt;/h2&gt;
 &lt;p&gt;The summer has passed and a lot of things are done. Some of them were not outlined in the original GSoC proposal. There is still some work in progress that I did not manage
 to finish in time. This work is devoted to Structured Variational Inference that was impossible before. I found
-this work very challenging and it took a lot of time to get the right direction and inspiration.&lt;/p&gt;
+this very challenging and it took a lot of time to get the right direction and inspiration.&lt;/p&gt;
 &lt;p&gt;The road was quite long and I was developing new architecture for about 2 weeks. No single line of code was written there.
 When I finally got the idea and understanding of what exactly is needed it was hard to stop coding. That's how inspiration
 is important, any challenging problem can be solved. I have to thank my mentors who guided me through this journey.
