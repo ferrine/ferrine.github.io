@@ -10,7 +10,7 @@ When I finally got the idea and understanding of what exactly is needed it was h
 is important, any challenging problem can be solved. I have to thank my mentors who guided me through this journey.
 I'm planning to continue further contributions in PyMC3 Variational Inference and improve it even more.&lt;/p&gt;
 &lt;h2&gt;Normalising FLows&lt;/h2&gt;
-&lt;p&gt;By now I've finished 1 huge PR (&lt;a href="https://github.com/pymc-devs/pymc3/pull/2362"&gt;pymc3/#2362&lt;/a&gt;) implementing Normalizing Flows. Now
+&lt;p&gt;By now I've finished 2 huge PRs (&lt;a href="https://github.com/pymc-devs/pymc3/pull/2306"&gt;pymc3/#2306&lt;/a&gt;, &lt;a href="https://github.com/pymc-devs/pymc3/pull/2362"&gt;pymc3/#2362&lt;/a&gt;) implementing Normalizing Flows. Now
 PyMC3 has state-of-the-art VI algorithms for both large and small models. You can see how it works in our
 &lt;a href="http://docs.pymc.io/en/latest/examples.html#variational-inference"&gt;documentation&lt;/a&gt;. The work that is done here:&lt;/p&gt;
 &lt;ul&gt;
@@ -42,6 +42,13 @@ suit extremely well for modern deep learning approaches. The scope of this PR is
 &lt;li&gt;[x] support local approximations everywhere&lt;/li&gt;
 &lt;li&gt;[ ] tests/debug&lt;/li&gt;
 &lt;li&gt;[ ] rerun notebooks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Other related work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/pymc-devs/pymc3/pull/2312"&gt;pymc3/#2312&lt;/a&gt;: Add notebook with VI quickstart&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pymc-devs/pymc3/pull/2408"&gt;pymc3/#2408&lt;/a&gt;: Add notebook with flows&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pymc-devs/pymc3/pull/2410"&gt;pymc3/#2410&lt;/a&gt;: Fix some typos in NFVI notebook&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pymc-devs/pymc3/pull/2171"&gt;pymc3/#2171&lt;/a&gt;: Boost minibatches&lt;/li&gt;
 &lt;/ul&gt;</content><category term="PyMC3"></category><category term="GSoC"></category></entry><entry><title>Grouped Variational Inference</title><link href="https://ferrine.github.io/blog/2017/07/13/grouped-variational-inference/" rel="alternate"></link><published>2017-07-13T08:06:00+03:00</published><updated>2017-07-13T08:06:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-07-13:/blog/2017/07/13/grouped-variational-inference/</id><summary type="html">One of the core motivations behind non-MeanField variational approximations is creating interactions between
 latent variables as fully factorized Gaussian does not capture this important property of posterior distribution.</summary><content type="html">&lt;h2&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;One of the core motivations behind non-MeanField variational approximations is creating interactions between
