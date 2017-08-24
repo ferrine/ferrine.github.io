@@ -9,7 +9,7 @@ this work very challenging and it took a lot of time to get the right direction 
 When I finally got the idea and understanding of what exactly is needed it was hard to stop coding. That's how inspiration
 is important, any challenging problem can be solved. I have to thank my mentors who guided me through this journey.
 I'm planning to continue further contributions in PyMC3 Variational Inference and improve it even more.&lt;/p&gt;
-&lt;h2&gt;Normalising FLows&lt;/h2&gt;
+&lt;h2&gt;Normalising Flows&lt;/h2&gt;
 &lt;p&gt;By now I've finished 2 huge PRs (&lt;a href="https://github.com/pymc-devs/pymc3/pull/2306"&gt;pymc3/#2306&lt;/a&gt;, &lt;a href="https://github.com/pymc-devs/pymc3/pull/2362"&gt;pymc3/#2362&lt;/a&gt;) implementing Normalizing Flows. Now
 PyMC3 has state-of-the-art VI algorithms for both large and small models. You can see how it works in our
 &lt;a href="http://docs.pymc.io/en/latest/examples.html#variational-inference"&gt;documentation&lt;/a&gt;. The work that is done here:&lt;/p&gt;
