@@ -14,7 +14,7 @@ is important, any challenging problem can be solved. I have to thank my mentors 
 I'm planning to continue further contributions in PyMC3 Variational Inference and improve it even more.
 
 ## Normalising FLows
-By now I've finished 1 huge PR ([pymc3/#2362](https://github.com/pymc-devs/pymc3/pull/2362)) implementing Normalizing Flows. Now
+By now I've finished 2 huge PRs ([pymc3/#2306](https://github.com/pymc-devs/pymc3/pull/2306), [pymc3/#2362](https://github.com/pymc-devs/pymc3/pull/2362)) implementing Normalizing Flows. Now
 PyMC3 has state-of-the-art VI algorithms for both large and small models. You can see how it works in our
 [documentation](http://docs.pymc.io/en/latest/examples.html#variational-inference). The work that is done here:
 
@@ -42,3 +42,10 @@ suit extremely well for modern deep learning approaches. The scope of this PR is
 - [x] support local approximations everywhere
 - [ ] tests/debug
 - [ ] rerun notebooks
+
+## Other related work
+
+-   [pymc3/#2312](https://github.com/pymc-devs/pymc3/pull/2312): Add notebook with VI quickstart
+-   [pymc3/#2408](https://github.com/pymc-devs/pymc3/pull/2408): Add notebook with flows
+-   [pymc3/#2410](https://github.com/pymc-devs/pymc3/pull/2410): Fix some typos in NFVI notebook
+-   [pymc3/#2171](https://github.com/pymc-devs/pymc3/pull/2171): Boost minibatches
