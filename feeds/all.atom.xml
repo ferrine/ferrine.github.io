@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>In Search Of The Holy Posterior</title><link href="https://ferrine.github.io/" rel="alternate"></link><link href="https://ferrine.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ferrine.github.io/</id><updated>2017-07-13T08:06:00+03:00</updated><entry><title>Grouped Variational Inference</title><link href="https://ferrine.github.io/blog/2017/07/13/grouped-variational-inference/" rel="alternate"></link><published>2017-07-13T08:06:00+03:00</published><updated>2017-07-13T08:06:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-07-13:/blog/2017/07/13/grouped-variational-inference/</id><summary type="html">One of the core motivations behind non-MeanField variational approximations is creating interactions between
+<feed xmlns="http://www.w3.org/2005/Atom"><title>In Search Of The Holy Posterior</title><link href="https://ferrine.github.io/" rel="alternate"></link><link href="https://ferrine.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ferrine.github.io/</id><updated>2017-08-24T12:46:01+03:00</updated><entry><title>Final Report</title><link href="https://ferrine.github.io/blog/2017/08/24/final-report/" rel="alternate"></link><published>2017-08-24T12:46:01+03:00</published><updated>2017-08-24T12:46:01+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-08-24:/blog/2017/08/24/final-report/</id><summary type="html">The summer has passed and a lot of things are done. Some of them were not outlined in the original GSoC proposal. There is still some work in progress that I did not manage
+to finish in time. This work is devoted to Structured Variational Inference that was impossible before. I found
+this work very challenging and it took a lot of time to get the right direction and inspiration.</summary><content type="html">&lt;h2&gt;Impressions&lt;/h2&gt;
+&lt;p&gt;The summer has passed and a lot of things are done. Some of them were not outlined in the original GSoC proposal. There is still some work in progress that I did not manage
+to finish in time. This work is devoted to Structured Variational Inference that was impossible before. I found
+this work very challenging and it took a lot of time to get the right direction and inspiration.&lt;/p&gt;
+&lt;p&gt;The road was quite long and I was developing new architecture for about 2 weeks. No single line of code was written there.
+When I finally got the idea and understanding of what exactly is needed it was hard to stop coding. That's how inspiration
+is important, any challenging problem can be solved. I have to thank my mentors who guided me through this journey.
+I'm planning to continue further contributions in PyMC3 Variational Inference and improve it even more.&lt;/p&gt;
+&lt;h2&gt;Normalising FLows&lt;/h2&gt;
+&lt;p&gt;By now I've finished 1 huge PR (&lt;a href="https://github.com/pymc-devs/pymc3/pull/2362"&gt;pymc3/#2362&lt;/a&gt;) implementing Normalizing Flows. Now
+PyMC3 has state-of-the-art VI algorithms for both large and small models. You can see how it works in our
+&lt;a href="http://docs.pymc.io/en/latest/examples.html#variational-inference"&gt;documentation&lt;/a&gt;. The work that is done here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;new &lt;code&gt;flows.py&lt;/code&gt; module created&lt;/li&gt;
+&lt;li&gt;refactored &lt;code&gt;pm.variational&lt;/code&gt; to support Normalizing Flows &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;implemented the following flow families&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Planar flow&lt;/li&gt;
+&lt;li&gt;Radial flow&lt;/li&gt;
+&lt;li&gt;Householder flow&lt;/li&gt;
+&lt;li&gt;Loc flow&lt;/li&gt;
+&lt;li&gt;Scale flow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;created a way to combine flows in formulas&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Structured Variational Inference&lt;/h2&gt;
+&lt;p&gt;The second (&lt;a href="https://github.com/pymc-devs/pymc3/pull/2416"&gt;pymc3/#2416&lt;/a&gt;) implements Structured Variational Inference not possible before. It is not ready for merge as it has to be
+reviewed a bit more and a lot of examples have to be rerun. That will take some more time for sure. It also allows to create
+arbitrary variational distributions in future for individual groups of variables. One of that ideas is Gubmel Softmax reparametrization that
+is an approach to relax discreteness and be able to backpropagate the underlying probabilities. It might
+suit extremely well for modern deep learning approaches. The scope of this PR is as following&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[x] refactoring &lt;code&gt;pm.variational&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;[x] rewrite all approximations as groups&lt;/li&gt;
+&lt;li&gt;[x] support local approximations everywhere&lt;/li&gt;
+&lt;li&gt;[ ] tests/debug&lt;/li&gt;
+&lt;li&gt;[ ] rerun notebooks&lt;/li&gt;
+&lt;/ul&gt;</content><category term="PyMC3"></category><category term="GSoC"></category></entry><entry><title>Grouped Variational Inference</title><link href="https://ferrine.github.io/blog/2017/07/13/grouped-variational-inference/" rel="alternate"></link><published>2017-07-13T08:06:00+03:00</published><updated>2017-07-13T08:06:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-07-13:/blog/2017/07/13/grouped-variational-inference/</id><summary type="html">One of the core motivations behind non-MeanField variational approximations is creating interactions between
 latent variables as fully factorized Gaussian does not capture this important property of posterior distribution.</summary><content type="html">&lt;h2&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;One of the core motivations behind non-MeanField variational approximations is creating interactions between
 latent variables as fully factorized Gaussian does not capture this important property of posterior distribution.&lt;/p&gt;
