@@ -3,7 +3,7 @@ title: CV
 Maxim Kochurov
 --------------
 
-**Current Position**: *Data Scientist* @ [Yandex Data Factory](https://yandexdatafactory.com/)
+**Current Position**: Researcher @ [BayesGroup](bayesgroup.ru)
 
 **Fields of interest**: Bayesian statistics, variational inference, machine learning. 
 
