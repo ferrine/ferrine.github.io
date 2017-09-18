@@ -3,7 +3,7 @@ title: CV
 Maxim Kochurov
 --------------
 
-**Current Position**: Researcher @ [BayesGroup](bayesgroup.ru)
+**Current Position**: Researcher @ [BayesGroup](https://cs.hse.ru/en/bayesgroup/)
 
 **Fields of interest**: Bayesian statistics, variational inference, machine learning. 
 
