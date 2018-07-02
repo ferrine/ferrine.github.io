@@ -7,7 +7,10 @@ from __future__ import unicode_literals
 
 import os
 import sys
-sys.path.append(os.curdir)
+sys.path.insert(
+    0,
+    os.path.abspath(os.path.dirname(__file__))
+)
 from pelicanconf import *
 
 SITEURL = 'https://ferrine.github.io'
