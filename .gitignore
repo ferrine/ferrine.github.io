@@ -17,3 +17,4 @@ _nb_header.html
 
 *.pyc*
 .ipynb_checkpoints/
+venv/

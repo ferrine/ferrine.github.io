@@ -5,9 +5,10 @@ import sys
 import os
 
 # Simple hack to do modular development with themes
+HERE = os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(
     0,
-    os.path.abspath(os.path.dirname(__file__))
+    HERE
 )
 from themesconf.blue_penguin import *
 DEFAULT_DATE_FORMAT = '%b %d, %Y'
@@ -36,7 +37,8 @@ ARTICLE_EXCLUDES = ['pages']
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/ferrine96'),
-          ('GitHub', 'https://github.com/ferrine'),)
+          ('GitHub', 'https://github.com/ferrine'),
+          ('Telegram', 'https://t.me/ferres'))
 
 
 DEFAULT_PAGINATION = 10
@@ -49,7 +51,8 @@ DEFAULT_METADATA = {
 }
 
 
-PLUGIN_PATHS = ['pelican-plugins']
+PLUGIN_PATHS = [os.path.join(HERE, 'pelican-plugins')]
+print(PLUGIN_PATHS)
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal', 'googleplus_comments', 'render_math']
