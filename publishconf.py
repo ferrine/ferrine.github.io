@@ -11,7 +11,7 @@ sys.path.insert(
     0,
     os.path.abspath(os.path.dirname(__file__))
 )
-from pelicanconf import *
+from pelicanconf import *   # noqa
 
 SITEURL = 'https://ferrine.github.io'
 RELATIVE_URLS = False

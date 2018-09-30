@@ -10,10 +10,10 @@ sys.path.insert(
     0,
     HERE
 )
-from themesconf.blue_penguin import *
+from themesconf.blue_penguin import *   # noqa
 DEFAULT_DATE_FORMAT = '%b %d, %Y'
 
-AUTHOR = 'Kochurov Maxim'
+AUTHOR = 'Maxim Kochurov'
 SITENAME = 'In Search Of The Holy Posterior'
 SITEURL = 'https://ferrine.github.io'
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
@@ -38,7 +38,8 @@ ARTICLE_EXCLUDES = ['pages']
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/ferrine96'),
           ('GitHub', 'https://github.com/ferrine'),
-          ('Telegram', 'https://t.me/ferres'))
+          ('Telegram', 'https://t.me/ferres'),
+          ('LinkedIn', 'https://www.linkedin.com/in/ferrine/'))
 
 
 DEFAULT_PAGINATION = 10
@@ -52,7 +53,6 @@ DEFAULT_METADATA = {
 
 
 PLUGIN_PATHS = [os.path.join(HERE, 'pelican-plugins')]
-print(PLUGIN_PATHS)
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal', 'googleplus_comments', 'render_math']
