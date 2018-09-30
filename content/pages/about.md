@@ -9,7 +9,7 @@ Maxim Kochurov
 
 **About me**
 
-I started the journey to machine learning in far 2016. I was a 2nd year bachelor student at [MSU](https://www.econ.msu.ru/), Econ department.
+I started the journey to machine learning in the distant 2016. I was a 2nd year bachelor student at [MSU](https://www.econ.msu.ru/), Econ department.
 In my spare time (I tried to have a lot of it) I learned programming and some basis of data science.
 It was a random idea that came to me in summer.
 That appeared to be very interesting.
@@ -27,9 +27,9 @@ People were super cool and they also shared their experience, it helped to get a
 
 All this Bayesian stuff leads not to Rome but to [PyMC3](https://github.com/pymc-devs/pymc3).
 That meeting seemed to be unavoidable.
-I was looking for ADVI algo implementations, these guys implemented one on top of Theano.
+I was looking for ADVI algo implementations and they've implemented one on top of Theano.
 I was not satisfied with it and decided to refactor.
-It passed for 1.5 years, I was rewriting it, adding some novel algorithms, generalising the implementation.
+It had passed for 1.5 years, I was rewriting it, adding some novel algorithms, generalising the implementation.
 OSS experience is the one I value the most.
 It gives you a lot: people, development and collaboration skills, sense of responsibility.
 It also teaches you to always have a roadmap, plan longer-term.
