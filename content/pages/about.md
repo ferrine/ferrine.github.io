@@ -1,4 +1,4 @@
-title: CV
+title: About
 
 Maxim Kochurov
 --------------
