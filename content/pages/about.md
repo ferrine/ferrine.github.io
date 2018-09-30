@@ -9,7 +9,7 @@ Maxim Kochurov
 
 **About me**
 
-I started the journey to machine learning in far 2016. I was a 2d year bachelor student at [MSU](https://www.econ.msu.ru/), Econ department.
+I started the journey to machine learning in far 2016. I was a 2nd year bachelor student at [MSU](https://www.econ.msu.ru/), Econ department.
 In my spare time (I tried to have a lot of it) I learned programming and some basis of data science.
 It was a random idea that came to me in summer.
 That appeared to be very interesting.
@@ -20,9 +20,9 @@ Bayesian reasoning and modelling.
 The course was tough with lots of math and practice.
 After it I started reading arXiv papers on Bayesian deep learning.
 
-While being on an internship @ [Yandex](https://yandex.ru/company/) I was having fun with variational inference reimplementing [one paper](https://arxiv.org/abs/1505.05424).
-It helped me to get in related stuff deeper and have more practice in coding.
-Yeah, good time, summer after 2d school year, I found fancy things, interesting people at [ods.ai](ods.ai).
+While being on an internship @ [Yandex](https://yandex.ru/company/) I was having fun with variational inference while reimplementing [a paper](https://arxiv.org/abs/1505.05424).
+It helped me to get to related stuff faster and practice coding.
+Yeah, good time, summer after 2nd school year, I found fancy things, interesting people at [ods.ai](ods.ai).
 People were super cool and they also shared their experience, it helped to get a mode complete view on what's going on in the field.
 
 All this Bayesian stuff leads not to Rome but to [PyMC3](https://github.com/pymc-devs/pymc3).
