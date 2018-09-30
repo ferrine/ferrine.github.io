@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>In Search Of The Holy Posterior - random</title><link href="https://ferrine.github.io/" rel="alternate"></link><link href="https://ferrine.github.io/feeds/random.atom.xml" rel="self"></link><id>https://ferrine.github.io/</id><updated>2018-09-30T20:20:00+03:00</updated><entry><title>History of GANs</title><link href="https://ferrine.github.io/blog/2018/09/30/history-of-gans/" rel="alternate"></link><published>2018-09-30T20:20:00+03:00</published><updated>2018-09-30T20:20:00+03:00</updated><author><name>Maxim Kochurov</name></author><id>tag:ferrine.github.io,2018-09-30:/blog/2018/09/30/history-of-gans/</id><summary type="html">One day I was asked to tell about what's going on in GANs. I said "ohh, ok".
-Here is my view so far.</summary><content type="html">&lt;p&gt;One day I was asked to tell about what's going on in GANs. I said "ohh, ok".
-Here is my view so far.&lt;/p&gt;
-&lt;h2&gt;GANs are everywhere&lt;/h2&gt;
-&lt;p&gt;If you only look &lt;a href="https://github.com/hindupuravinash/the-gan-zoo"&gt;here&lt;/a&gt; (warning, this might frighten you),&lt;/p&gt;</content><category term="random"></category><category term="gans"></category><category term="generative models"></category></entry></feed>
