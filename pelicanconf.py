@@ -38,12 +38,8 @@ ARTICLE_EXCLUDES = ['pages']
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/ferrine96'),
           ('GitHub', 'https://github.com/ferrine'),
-<<<<<<< HEAD
           ('Telegram', 'https://t.me/ferres'),
           ('LinkedIn', 'https://www.linkedin.com/in/ferrine/'))
-=======
-          ('Telegram', 'https://t.me/ferres'))
->>>>>>> 3d2d610ffa15e1bbbeaf4c0dfe12dc7ca32277a8
 
 
 DEFAULT_PAGINATION = 10
@@ -57,10 +53,6 @@ DEFAULT_METADATA = {
 
 
 PLUGIN_PATHS = [os.path.join(HERE, 'pelican-plugins')]
-<<<<<<< HEAD
-=======
-print(PLUGIN_PATHS)
->>>>>>> 3d2d610ffa15e1bbbeaf4c0dfe12dc7ca32277a8
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal', 'googleplus_comments', 'render_math']
