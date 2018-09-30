@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>In Search Of The Holy Posterior</title><link href="https://ferrine.github.io/" rel="alternate"></link><link href="https://ferrine.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ferrine.github.io/</id><updated>2017-08-24T12:46:01+03:00</updated><entry><title>Final Report</title><link href="https://ferrine.github.io/blog/2017/08/24/final-report/" rel="alternate"></link><published>2017-08-24T12:46:01+03:00</published><updated>2017-08-24T12:46:01+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-08-24:/blog/2017/08/24/final-report/</id><summary type="html">The summer has passed and a lot of things are done. Some of them were not outlined in the original GSoC proposal. There is still some work in progress that I did not manage
+<feed xmlns="http://www.w3.org/2005/Atom"><title>In Search Of The Holy Posterior</title><link href="https://ferrine.github.io/" rel="alternate"></link><link href="https://ferrine.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ferrine.github.io/</id><updated>2017-08-24T12:46:01+03:00</updated><entry><title>Final Report</title><link href="https://ferrine.github.io/blog/2017/08/24/final-report/" rel="alternate"></link><published>2017-08-24T12:46:01+03:00</published><updated>2017-08-24T12:46:01+03:00</updated><author><name>Maxim Kochurov</name></author><id>tag:ferrine.github.io,2017-08-24:/blog/2017/08/24/final-report/</id><summary type="html">The summer has passed and a lot of things are done. Some of them were not outlined in the original GSoC proposal. There is still some work in progress that I did not manage
 to finish in time. This work is devoted to Structured Variational Inference that was impossible before. I found
 this very challenging and it took a lot of time to get the right direction and inspiration.</summary><content type="html">&lt;h2&gt;Impressions&lt;/h2&gt;
 &lt;p&gt;The summer has passed and a lot of things are done. Some of them were not outlined in the original GSoC proposal. There is still some work in progress that I did not manage
@@ -49,7 +49,7 @@ suit extremely well for modern deep learning approaches. The scope of this PR is
 &lt;li&gt;&lt;a href="https://github.com/pymc-devs/pymc3/pull/2408"&gt;pymc3/#2408&lt;/a&gt;: Add notebook with flows&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/pymc-devs/pymc3/pull/2410"&gt;pymc3/#2410&lt;/a&gt;: Fix some typos in NFVI notebook&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/pymc-devs/pymc3/pull/2171"&gt;pymc3/#2171&lt;/a&gt;: Boost minibatches&lt;/li&gt;
-&lt;/ul&gt;</content><category term="PyMC3"></category><category term="GSoC"></category></entry><entry><title>Grouped Variational Inference</title><link href="https://ferrine.github.io/blog/2017/07/13/grouped-variational-inference/" rel="alternate"></link><published>2017-07-13T08:06:00+03:00</published><updated>2017-07-13T08:06:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-07-13:/blog/2017/07/13/grouped-variational-inference/</id><summary type="html">One of the core motivations behind non-MeanField variational approximations is creating interactions between
+&lt;/ul&gt;</content><category term="PyMC3"></category><category term="GSoC"></category></entry><entry><title>Grouped Variational Inference</title><link href="https://ferrine.github.io/blog/2017/07/13/grouped-variational-inference/" rel="alternate"></link><published>2017-07-13T08:06:00+03:00</published><updated>2017-07-13T08:06:00+03:00</updated><author><name>Maxim Kochurov</name></author><id>tag:ferrine.github.io,2017-07-13:/blog/2017/07/13/grouped-variational-inference/</id><summary type="html">One of the core motivations behind non-MeanField variational approximations is creating interactions between
 latent variables as fully factorized Gaussian does not capture this important property of posterior distribution.</summary><content type="html">&lt;h2&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;One of the core motivations behind non-MeanField variational approximations is creating interactions between
 latent variables as fully factorized Gaussian does not capture this important property of posterior distribution.&lt;/p&gt;
@@ -101,7 +101,7 @@ So see it soon in &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
@@ -141,12 +141,11 @@ So see it soon in &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="Ideas"></category></entry><entry><title>Normalizing Flows Overview</title><link href="https://ferrine.github.io/blog/2017/07/11/normalizing-flows-overview/" rel="alternate"></link><published>2017-07-11T07:58:00+03:00</published><updated>2017-07-11T07:58:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-07-11:/blog/2017/07/11/normalizing-flows-overview/</id><summary type="html">One of milestones in my Google Summer of Code was implementing Normalizing Flows. They appeared 
+&lt;/script&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="Ideas"></category></entry><entry><title>Normalizing Flows Overview</title><link href="https://ferrine.github.io/blog/2017/07/11/normalizing-flows-overview/" rel="alternate"></link><published>2017-07-11T07:58:00+03:00</published><updated>2017-07-11T07:58:00+03:00</updated><author><name>Maxim Kochurov</name></author><id>tag:ferrine.github.io,2017-07-11:/blog/2017/07/11/normalizing-flows-overview/</id><summary type="html">One of milestones in my Google Summer of Code was implementing Normalizing Flows. They appeared 
 to be very interesting and hard to use. See post below</summary><content type="html">&lt;p&gt;One of milestones in my Google Summer of Code was implementing Normalizing Flows. They appeared 
 to be very interesting and hard to use. See post below&lt;/p&gt;
 &lt;p&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -175,15 +174,17 @@ to be very interesting and hard to use. See post below&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="Theory"&gt;Theory&lt;a class="anchor-link" href="#Theory"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Normalizing Flow is a series of invertible transformations on initial distribution.&lt;/p&gt;
-$$z_K = f_K \circ \dots \circ f_2 \circ f_1(z_0) $$&lt;p&gt;In that case we can compute tractable density for the flow.&lt;/p&gt;
-$$\ln q_K(z_K) = \ln q_0(z_0) - \sum_{k=1}^{K}\ln \left|\frac{\partial f_k}{\partial z_{k-1}}\right|$$&lt;p&gt;Every $f_k$ here is a parametric function with defined determinant. We can choose every step here. For example the simplest flow is an affine transform:&lt;/p&gt;
-$$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field approximation if $z_0 \sim \mathcal{N}(0, 1)$&lt;/p&gt;
+&lt;p&gt;$$z_K = f_K \circ \dots \circ f_2 \circ f_1(z_0) $$&lt;/p&gt;
+&lt;p&gt;In that case we can compute tractable density for the flow.&lt;/p&gt;
+&lt;p&gt;$$\ln q_K(z_K) = \ln q_0(z_0) - \sum_{k=1}^{K}\ln \left|\frac{\partial f_k}{\partial z_{k-1}}\right|$$&lt;/p&gt;
+&lt;p&gt;Every $f_k$ here is a parametric function with defined determinant. We can choose every step here. For example the simplest flow is an affine transform:&lt;/p&gt;
+&lt;p&gt;$$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;/p&gt;
+&lt;p&gt;Here we get mean field approximation if $z_0 \sim \mathcal{N}(0, 1)$&lt;/p&gt;
 &lt;h2 id="Flow-Formulas"&gt;Flow Formulas&lt;a class="anchor-link" href="#Flow-Formulas"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In PyMC3 there is a flexible way to define flows with formulas. We have 5 of them by the moment:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Loc (&lt;code&gt;loc&lt;/code&gt;): $z' = z + \mu$&lt;/li&gt;
@@ -196,8 +197,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -224,7 +224,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
+
 
 
 
@@ -255,7 +257,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+
 
 
 
@@ -269,8 +273,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -293,8 +296,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -320,7 +322,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
+
 
 
 
@@ -334,8 +338,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -361,7 +364,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[6]:&lt;/div&gt;
+
 
 
 
@@ -375,8 +380,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -402,7 +406,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
+
 
 
 
@@ -416,8 +422,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -443,7 +448,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
+
 
 
 
@@ -457,8 +464,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -471,8 +477,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -480,8 +485,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -574,7 +578,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$&lt;p&gt;Here we get mean field app
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -1180,8 +1186,7 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -1203,8 +1208,7 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -1231,7 +1235,9 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Assigned NUTS to pot1
@@ -1262,7 +1268,9 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[14]:&lt;/div&gt;
+
 
 
 
@@ -1273,7 +1281,9 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -1628,8 +1638,7 @@ TCAiIskwhIiISDIMISIikgxDiIiIJMMQIiIiyTCEiIhIMv8fiWsqO0qAtoMAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -1661,7 +1670,9 @@ TCAiIskwhIiISDIMISIikgxDiIiIJMMQIiIiyTCEiIhIMv8fiWsqO0qAtoMAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -1976,8 +1987,7 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -2004,7 +2014,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[16]:&lt;/div&gt;
+
 
 
 
@@ -2036,7 +2048,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[17]:&lt;/div&gt;
+
 
 
 
@@ -2067,7 +2081,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_text output_error"&gt;
 &lt;pre&gt;
@@ -2104,7 +2120,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[19]:&lt;/div&gt;
+
 
 
 
@@ -2166,7 +2184,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = -1.3917: 100%|██████████| 60000/60000 [01:24&amp;lt;00:00, 706.32it/s] 
@@ -2176,7 +2196,9 @@ Finished [100%]: Average Loss = -1.4061
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[21]:&lt;/div&gt;
+
 
 
 
@@ -2207,7 +2229,9 @@ Finished [100%]: Average Loss = -1.4061
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -2545,8 +2569,7 @@ kcz+H+kHm2mEiPnCAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -2573,7 +2596,9 @@ kcz+H+kHm2mEiPnCAAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[23]:&lt;/div&gt;
+
 
 
 
@@ -2584,7 +2609,9 @@ kcz+H+kHm2mEiPnCAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -2937,7 +2964,9 @@ gg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[24]:&lt;/div&gt;
+
 
 
 
@@ -3012,7 +3041,9 @@ gg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -10642,8 +10673,7 @@ giAIgiCIQcb/BzWMuGUTcj6SAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -10669,7 +10699,9 @@ giAIgiCIQcb/BzWMuGUTcj6SAAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = -1.2703: 100%|██████████| 60000/60000 [01:16&amp;lt;00:00, 784.75it/s]
@@ -10679,7 +10711,9 @@ Finished [100%]: Average Loss = -1.2625
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[27]:&lt;/div&gt;
+
 
 
 
@@ -10710,7 +10744,9 @@ Finished [100%]: Average Loss = -1.2625
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -18622,7 +18658,9 @@ AElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[29]:&lt;/div&gt;
+
 
 
 
@@ -18633,7 +18671,9 @@ AElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -18964,8 +19004,7 @@ paSk4PHHH5ejNCJNYydERESK4cQEIiJSDEOIiIgUwxAiIiLFMISIiEgxDCEiIlIMQ4iIiBTz/8Gc
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -18974,8 +19013,7 @@ paSk4PHHH5ejNCJNYydERESK4cQEIiJSDEOIiIgUwxAiIiLFMISIiEgxDCEiIlIMQ4iIiBTz/8Gc
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -19006,7 +19044,9 @@ paSk4PHHH5ejNCJNYydERESK4cQEIiJSDEOIiIgUwxAiIiLFMISIiEgxDCEiIlIMQ4iIiBTz/8Gc
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[30]:&lt;/div&gt;
+
 
 
 
@@ -19017,7 +19057,9 @@ paSk4PHHH5ejNCJNYydERESK4cQEIiJSDEOIiIgUwxAiIiLFMISIiEgxDCEiIlIMQ4iIiBTz/8Gc
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -19356,8 +19398,7 @@ AABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -19383,7 +19424,9 @@ AABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = -1.76: 100%|██████████| 25000/25000 [02:10&amp;lt;00:00, 191.90it/s]  
@@ -19393,7 +19436,9 @@ Finished [100%]: Average Loss = -1.7604
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[31]:&lt;/div&gt;
+
 
 
 
@@ -19425,7 +19470,9 @@ Finished [100%]: Average Loss = -1.7604
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[32]:&lt;/div&gt;
+
 
 
 
@@ -19436,7 +19483,9 @@ Finished [100%]: Average Loss = -1.7604
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -19806,8 +19855,7 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -19816,8 +19864,7 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -19828,10 +19875,9 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
 &lt;/div&gt;
  
 
-&lt;/p&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="features"></category></entry><entry><title>Variational API Quick Start</title><link href="https://ferrine.github.io/blog/2017/06/21/variational-api-quick-start/" rel="alternate"></link><published>2017-06-21T13:10:00+03:00</published><updated>2017-06-21T13:10:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-06-21:/blog/2017/06/21/variational-api-quick-start/</id><summary type="html">As problems were met with implementing flows my mentors suggested to create a notebook with VI qickstart while doing refactoring. See it below.</summary><content type="html">&lt;p&gt;As problems were met with implementing flows my mentors suggested to create a notebook with VI qickstart while doing refactoring. See it below.&lt;/p&gt;
+&lt;/p&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="features"></category></entry><entry><title>Variational API Quick Start</title><link href="https://ferrine.github.io/blog/2017/06/21/variational-api-quick-start/" rel="alternate"></link><published>2017-06-21T13:10:00+03:00</published><updated>2017-06-21T13:10:00+03:00</updated><author><name>Maxim Kochurov</name></author><id>tag:ferrine.github.io,2017-06-21:/blog/2017/06/21/variational-api-quick-start/</id><summary type="html">As problems were met with implementing flows my mentors suggested to create a notebook with VI qickstart while doing refactoring. See it below.</summary><content type="html">&lt;p&gt;As problems were met with implementing flows my mentors suggested to create a notebook with VI qickstart while doing refactoring. See it below.&lt;/p&gt;
 &lt;p&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -19867,8 +19913,7 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -19896,8 +19941,7 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -19939,7 +19983,9 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Auto-assigning NUTS sampler...
@@ -19973,7 +20019,9 @@ Interrupted at 2,900 [1%]: Average Loss = 6.0938
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -20980,8 +21028,7 @@ IgZYQRAEQRAEQRAETSIGWEEQBEEQBEEQBE3iPx6OmtjNt+3pAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21007,8 +21054,7 @@ IgZYQRAEQRAEQRAETSIGWEEQBEEQBEEQBE3iPx6OmtjNt+3pAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21035,7 +21081,9 @@ IgZYQRAEQRAEQRAETSIGWEEQBEEQBEEQBE3iPx6OmtjNt+3pAAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = 2.2413: 100%|██████████| 10000/10000 [00:00&amp;lt;00:00, 11143.17it/s]
@@ -21065,7 +21113,9 @@ Finished [100%]: Average Loss = 2.2687
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -21248,8 +21298,7 @@ ALCBpAoAAAAAbCCpAgAAAAAb/g/TSJClXpcymwAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21276,7 +21325,9 @@ ALCBpAoAAAAAbCCpAgAAAAAb/g/TSJClXpcymwAAAABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;Help on class CheckParametersConvergence in module pymc3.variational.callbacks:
@@ -21341,8 +21392,7 @@ class CheckParametersConvergence(Callback)
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21369,7 +21419,9 @@ class CheckParametersConvergence(Callback)
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = 2.2559: 100%|██████████| 10000/10000 [00:01&amp;lt;00:00, 9938.76it/s]
@@ -21399,7 +21451,9 @@ Finished [100%]: Average Loss = 2.2763
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -21580,8 +21634,7 @@ AABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21608,7 +21661,9 @@ AABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = 3.6063:  40%|████      | 4029/10000 [00:00&amp;lt;00:00, 10150.26it/s]
@@ -21622,8 +21677,7 @@ Interrupted at 4,700 [47%]: Average Loss = 4.7995
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21649,7 +21703,9 @@ Interrupted at 4,700 [47%]: Average Loss = 4.7995
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -21851,8 +21907,7 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21860,8 +21915,7 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21901,7 +21955,9 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[15]:&lt;/div&gt;
+
 
 
 
@@ -21915,8 +21971,7 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21942,7 +21997,9 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[16]:&lt;/div&gt;
+
 
 
 
@@ -21956,8 +22013,7 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -21983,7 +22039,9 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[17]:&lt;/div&gt;
+
 
 
 
@@ -21997,8 +22055,7 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -22040,7 +22097,9 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;
@@ -22084,8 +22143,7 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -22111,7 +22169,9 @@ y3pQy5s9AK5ze9ts5MV4dLW6Sbntj/Ufe8YSEfmcl6tuiIjIBAZ6IiKfY6AnIvI5BnoiIp9joCci
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = 1.9568: 100%|██████████| 20000/20000 [00:02&amp;lt;00:00, 7952.04it/s]
@@ -22124,8 +22184,7 @@ Finished [100%]: Average Loss = 1.9589
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -22160,7 +22219,9 @@ Finished [100%]: Average Loss = 1.9589
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -22977,8 +23038,7 @@ CKKg+D/o/ljWWAabtwAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -23004,7 +23064,9 @@ CKKg+D/o/ljWWAabtwAAAABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = 1.8638: 100%|██████████| 100000/100000 [00:17&amp;lt;00:00, 5645.84it/s]
@@ -23017,8 +23079,7 @@ Finished [100%]: Average Loss = 1.8422
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -23053,7 +23114,9 @@ Finished [100%]: Average Loss = 1.8422
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -23909,8 +23972,7 @@ LEEQBEEQBEEQBJFUkCFLEARBEARBEARBJBX/D0wfEZOmTyxgAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -23939,7 +24001,9 @@ LEEQBEEQBEEQBJFUkCFLEARBEARBEARBJBX/D0wfEZOmTyxgAAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -24320,8 +24384,7 @@ ECrChBBCiCBUhAkhhBBB/g8z3MWJSb8CrQAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -24349,7 +24412,9 @@ ECrChBBCiCBUhAkhhBBB/g8z3MWJSb8CrQAAAABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;100%|██████████| 300/300 [00:39&amp;lt;00:00,  7.55it/s]
@@ -24380,7 +24445,9 @@ ECrChBBCiCBUhAkhhBBB/g8z3MWJSb8CrQAAAABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -24801,8 +24868,7 @@ JClCZBGWJEmSpAiRRViSJEmSIkQWYUmSJEmKkP8HS9Rf2c3txi4AAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -24831,7 +24897,9 @@ JClCZBGWJEmSpAiRRViSJEmSIkQWYUmSJEmKkP8HS9Rf2c3txi4AAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;100%|██████████| 300/300 [00:38&amp;lt;00:00,  8.00it/s]
@@ -24862,7 +24930,9 @@ JClCZBGWJEmSpAiRRViSJEmSIkQWYUmSJEmKkP8HS9Rf2c3txi4AAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -25247,8 +25317,7 @@ QmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -25272,8 +25341,7 @@ QmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -25281,8 +25349,7 @@ QmCC
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -25308,7 +25375,9 @@ QmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;Help on method apply_replacements in module pymc3.variational.opvi:
@@ -25342,8 +25411,7 @@ apply_replacements(node, deterministic=False, include=None, exclude=None, more_r
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -25381,7 +25449,9 @@ apply_replacements(node, deterministic=False, include=None, exclude=None, more_r
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[32]:&lt;/div&gt;
+
 
 
 
@@ -25412,7 +25482,9 @@ apply_replacements(node, deterministic=False, include=None, exclude=None, more_r
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[33]:&lt;/div&gt;
+
 
 
 
@@ -25443,7 +25515,9 @@ apply_replacements(node, deterministic=False, include=None, exclude=None, more_r
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[34]:&lt;/div&gt;
+
 
 
 
@@ -25457,8 +25531,7 @@ apply_replacements(node, deterministic=False, include=None, exclude=None, more_r
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -25485,7 +25558,9 @@ apply_replacements(node, deterministic=False, include=None, exclude=None, more_r
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -25710,8 +25785,7 @@ CCEMAIBHCGEAADxCCAMA4BFCGAAAj/x/JBya0ULNGyEAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -25751,7 +25825,9 @@ CCEMAIBHCGEAADxCCAMA4BFCGAAAj/x/JBya0ULNGyEAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -25970,8 +26046,7 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -25997,7 +26072,9 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[38]:&lt;/div&gt;
+
 
 
 
@@ -26028,7 +26105,9 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[39]:&lt;/div&gt;
+
 
 
 
@@ -26042,8 +26121,7 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26069,7 +26147,9 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[40]:&lt;/div&gt;
+
 
 
 
@@ -26100,7 +26180,9 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[41]:&lt;/div&gt;
+
 
 
 
@@ -26114,8 +26196,7 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26156,7 +26237,9 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[45]:&lt;/div&gt;
+
 
 
 
@@ -26187,7 +26270,9 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[46]:&lt;/div&gt;
+
 
 
 
@@ -26201,8 +26286,7 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26211,8 +26295,7 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26251,7 +26334,9 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[48]:&lt;/div&gt;
+
 
 
 
@@ -26282,7 +26367,9 @@ AOATQhgAAJ/8fxkg2rRVZzJ1AAAAAElFTkSuQmCC
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -26502,8 +26589,7 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26531,8 +26617,7 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26541,8 +26626,7 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26570,8 +26654,7 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26610,8 +26693,7 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26636,8 +26718,7 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26682,7 +26763,9 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;100%|██████████| 100/100 [00:08&amp;lt;00:00, 12.50it/s]
@@ -26691,7 +26774,9 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[55]:&lt;/div&gt;
+
 
 
 
@@ -26726,7 +26811,9 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[56]:&lt;/div&gt;
+
 
 
 
@@ -26737,7 +26824,9 @@ iEhLTKiIiIiIiIi0xISKiIiIiIhIS0yoiIiIiIiItMSEioiIiIiISEtMqIiIiIiIiLT0X5aeNgc/
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -28117,8 +28206,7 @@ MborlUaj0Wg0I4ZOVNNoNBqNZsTQwlmj0Wg0mhFDC2eNRqPRaEYMLZw1Go1GoxkxtHDWaDQajWbE
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -28147,7 +28235,9 @@ MborlUaj0Wg0I4ZOVNNoNBqNZsTQwlmj0Wg0mhFDC2eNRqPRaEYMLZw1Go1GoxkxtHDWaDQajWbE
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;100%|██████████| 400/400 [00:27&amp;lt;00:00, 14.39it/s]
@@ -28179,7 +28269,9 @@ MborlUaj0Wg0I4ZOVNNoNBqNZsTQwlmj0Wg0mhFDC2eNRqPRaEYMLZw1Go1GoxkxtHDWaDQajWbE
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -28824,8 +28916,7 @@ IiEshBBClIiEsBBCCFEiEsJCCCFEifw/DjNYVOmY7dkAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -28834,8 +28925,7 @@ IiEshBBClIiEsBBCCFEiEsJCCCFEifw/DjNYVOmY7dkAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -28862,7 +28952,9 @@ IiEshBBClIiEsBBCCFEiEsJCCCFEifw/DjNYVOmY7dkAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[59]:&lt;/div&gt;
+
 
 
 
@@ -28876,8 +28968,7 @@ IiEshBBClIiEsBBCCFEiEsJCCCFEifw/DjNYVOmY7dkAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -28900,8 +28991,7 @@ IiEshBBClIiEsBBCCFEiEsJCCCFEifw/DjNYVOmY7dkAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -28925,8 +29015,7 @@ IiEshBBClIiEsBBCCFEiEsJCCCFEifw/DjNYVOmY7dkAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -28968,7 +29057,9 @@ IiEshBBClIiEsBBCCFEiEsJCCCFEifw/DjNYVOmY7dkAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = 6.0648e+09:   0%|          | 10/10000 [00:22&amp;lt;6:03:15,  2.18s/it]
@@ -28982,8 +29073,7 @@ Interrupted at 10 [0%]: Average Loss = 6.5297e+09
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -29028,7 +29118,9 @@ Interrupted at 10 [0%]: Average Loss = 6.5297e+09
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = 1.2496e+08: 100%|██████████| 10000/10000 [00:11&amp;lt;00:00, 870.31it/s]
@@ -29058,7 +29150,9 @@ Finished [100%]: Average Loss = 1.2489e+08
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -29285,8 +29379,7 @@ rkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -29312,7 +29405,9 @@ rkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;Multidimensional minibatch that is pure TensorVariable
@@ -29455,7 +29550,7 @@ rkJggg==
 &lt;/div&gt;
  
 
-&lt;/p&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="tutorials"></category></entry><entry><title>OPVI Refactoring</title><link href="https://ferrine.github.io/blog/2017/06/21/opvi-refactoring/" rel="alternate"></link><published>2017-06-21T12:51:00+03:00</published><updated>2017-06-21T12:51:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-06-21:/blog/2017/06/21/opvi-refactoring/</id><summary type="html">Recently I've started working on &lt;a href="https://arxiv.org/abs/1505.05770"&gt;normalizing flows&lt;/a&gt;. That is a very powerful and
+&lt;/p&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="tutorials"></category></entry><entry><title>OPVI Refactoring</title><link href="https://ferrine.github.io/blog/2017/06/21/opvi-refactoring/" rel="alternate"></link><published>2017-06-21T12:51:00+03:00</published><updated>2017-06-21T12:51:00+03:00</updated><author><name>Maxim Kochurov</name></author><id>tag:ferrine.github.io,2017-06-21:/blog/2017/06/21/opvi-refactoring/</id><summary type="html">Recently I've started working on &lt;a href="https://arxiv.org/abs/1505.05770"&gt;normalizing flows&lt;/a&gt;. That is a very powerful and
 expressive family of distributions. Utilizing that approach for variational inference can give very nice results.
 Moreover this inference is tractable when dealing with huge datasets as it supports minibatching.</summary><content type="html">&lt;p&gt;Recently I've started working on &lt;a href="https://arxiv.org/abs/1505.05770"&gt;normalizing flows&lt;/a&gt;. That is a very powerful and
 expressive family of distributions. Utilizing that approach for variational inference can give very nice results.
@@ -29486,7 +29581,7 @@ results to use them for creating &lt;span class="math"&gt;\(log(q)\)&lt;/span&gt
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
@@ -29526,10 +29621,9 @@ results to use them for creating &lt;span class="math"&gt;\(log(q)\)&lt;/span&gt
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="issues"></category></entry><entry><title>ASVGD Sanity Check</title><link href="https://ferrine.github.io/blog/2017/06/04/asvgd-sanity-check/" rel="alternate"></link><published>2017-06-04T01:40:00+03:00</published><updated>2017-06-04T01:40:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-06-04:/blog/2017/06/04/asvgd-sanity-check/</id><summary type="html">During My GSoC I was also working on state-of-the-art methods from recent papers. One of them was Amortized Stein Variational Gradient Descent (ASVGD). I found this method to be problematic and decided to write a blogpost with this evidence.</summary><content type="html">&lt;p&gt;During My GSoC I was also working on state-of-the-art methods from recent papers. One of them was Amortized Stein Variational Gradient Descent (ASVGD). I found this method to be problematic and decided to write a blogpost with this evidence.&lt;/p&gt;
+&lt;/script&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="issues"></category></entry><entry><title>ASVGD Sanity Check</title><link href="https://ferrine.github.io/blog/2017/06/04/asvgd-sanity-check/" rel="alternate"></link><published>2017-06-04T01:40:00+03:00</published><updated>2017-06-04T01:40:00+03:00</updated><author><name>Maxim Kochurov</name></author><id>tag:ferrine.github.io,2017-06-04:/blog/2017/06/04/asvgd-sanity-check/</id><summary type="html">During My GSoC I was also working on state-of-the-art methods from recent papers. One of them was Amortized Stein Variational Gradient Descent (ASVGD). I found this method to be problematic and decided to write a blogpost with this evidence.</summary><content type="html">&lt;p&gt;During My GSoC I was also working on state-of-the-art methods from recent papers. One of them was Amortized Stein Variational Gradient Descent (ASVGD). I found this method to be problematic and decided to write a blogpost with this evidence.&lt;/p&gt;
 &lt;p&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -29559,8 +29653,7 @@ results to use them for creating &lt;span class="math"&gt;\(log(q)\)&lt;/span&gt
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -29592,7 +29685,9 @@ results to use them for creating &lt;span class="math"&gt;\(log(q)\)&lt;/span&gt
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -29934,8 +30029,7 @@ AABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -29962,7 +30056,9 @@ AABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Average Loss = 0.0024892: 100%|██████████| 10000/10000 [00:00&amp;lt;00:00, 15290.73it/s]
@@ -30000,7 +30096,9 @@ Finished [100%]: Average Loss = 0.0025053
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[4]:&lt;/div&gt;
+
 
 
 
@@ -30011,7 +30109,9 @@ Finished [100%]: Average Loss = 0.0025053
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -30430,8 +30530,7 @@ ESHSWAkhhBBCRIg0VkIIIYQQEfL/AcnSQ5aldIANAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -30440,8 +30539,7 @@ ESHSWAkhhBBCRIg0VkIIIYQQEfL/AcnSQ5aldIANAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -30452,12 +30550,13 @@ they fit target distribution best.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Input:&lt;/em&gt; Parametrized random generator $R_{\theta}$, $n$ - number of samples from $R_{\theta}$&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Output:&lt;/em&gt; $R_{\theta^{*}}$ that approximates the target distribution.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;On each iteration&lt;/strong&gt;&lt;/p&gt;
-\begin{align*}
-    \Delta x_i &amp;= \hat{\phi}^{*}(x_i) \\
-    \hat{\phi}^{*}(x) &amp;= \frac{1}{n}\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)] \\
-    \Delta_{\theta} &amp;= \frac{1}{n}\sum^{n}_{i=1}\Delta x_i\frac{\partial x_i}{\partial \theta} \\
-    \theta &amp;\leftarrow \theta + \epsilon \Delta_{\theta}
-\end{align*}&lt;h2 id="References"&gt;References&lt;a class="anchor-link" href="#References"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;p&gt;\begin{align*}
+    \Delta x_i &amp;amp;= \hat{\phi}^{*}(x_i) \\
+    \hat{\phi}^{*}(x) &amp;amp;= \frac{1}{n}\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)] \\
+    \Delta_{\theta} &amp;amp;= \frac{1}{n}\sum^{n}_{i=1}\Delta x_i\frac{\partial x_i}{\partial \theta} \\
+    \theta &amp;amp;\leftarrow \theta + \epsilon \Delta_{\theta}
+\end{align*}&lt;/p&gt;
+&lt;h2 id="References"&gt;References&lt;a class="anchor-link" href="#References"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Dilin Wang, Yihao Feng, Qiang Liu (2016)
 Learning to Sample Using Stein Discrepancy
 &lt;a href="http://bayesiandeeplearning.org/papers/BDL_21.pdf"&gt;http://bayesiandeeplearning.org/papers/BDL_21.pdf&lt;/a&gt;&lt;/p&gt;
@@ -30475,8 +30574,7 @@ arXiv:1704.02399&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -30503,7 +30601,9 @@ arXiv:1704.02399&lt;/p&gt;
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;/Users/ferres/dev/pymc3/pymc3/variational/inference.py:63: UserWarning: You are using experimental inference Operator. It requires careful choice of temperature, default is 1. Default temperature works well for low dimensional problems and for significant `n_obj_mc`. Temperature &amp;gt; 1 gives more exploration power to algorithm, &amp;lt; 1 leads to undesirable results. Please take it in account when looking at inference result. Posterior variance is often **underestimated** when using temperature = 1.
@@ -30516,8 +30616,7 @@ arXiv:1704.02399&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -30555,7 +30654,9 @@ arXiv:1704.02399&lt;/p&gt;
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;100%|██████████| 500/500 [01:00&amp;lt;00:00,  8.38it/s]
@@ -30564,7 +30665,9 @@ arXiv:1704.02399&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[6]:&lt;/div&gt;
+
 
 
 
@@ -30599,7 +30702,9 @@ arXiv:1704.02399&lt;/p&gt;
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -31046,8 +31151,7 @@ SgghhBAiTKRYCSGEEEKEyf8DLiTY8BFb2YEAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -31077,7 +31181,9 @@ SgghhBAiTKRYCSGEEEKEyf8DLiTY8BFb2YEAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -31713,8 +31819,7 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -31741,7 +31846,9 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;/Users/ferres/dev/pymc3/pymc3/variational/inference.py:63: UserWarning: You are using experimental inference Operator. It requires careful choice of temperature, default is 1. Default temperature works well for low dimensional problems and for significant `n_obj_mc`. Temperature &amp;gt; 1 gives more exploration power to algorithm, &amp;lt; 1 leads to undesirable results. Please take it in account when looking at inference result. Posterior variance is often **underestimated** when using temperature = 1.
@@ -31776,7 +31883,9 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;100%|██████████| 20000/20000 [00:09&amp;lt;00:00, 2010.84it/s]
@@ -31785,7 +31894,9 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
+
 
 
 
@@ -31820,7 +31931,9 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -32309,8 +32422,7 @@ RK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -32343,7 +32455,9 @@ RK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;/Users/ferres/dev/pymc3/pymc3/variational/inference.py:63: UserWarning: You are using experimental inference Operator. It requires careful choice of temperature, default is 1. Default temperature works well for low dimensional problems and for significant `n_obj_mc`. Temperature &amp;gt; 1 gives more exploration power to algorithm, &amp;lt; 1 leads to undesirable results. Please take it in account when looking at inference result. Posterior variance is often **underestimated** when using temperature = 1.
@@ -32354,7 +32468,9 @@ RK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[10]:&lt;/div&gt;
+
 
 
 
@@ -32389,7 +32505,9 @@ RK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -32878,8 +32996,7 @@ rkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -32906,7 +33023,9 @@ rkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;/Users/ferres/dev/pymc3/pymc3/variational/inference.py:63: UserWarning: You are using experimental inference Operator. It requires careful choice of temperature, default is 1. Default temperature works well for low dimensional problems and for significant `n_obj_mc`. Temperature &amp;gt; 1 gives more exploration power to algorithm, &amp;lt; 1 leads to undesirable results. Please take it in account when looking at inference result. Posterior variance is often **underestimated** when using temperature = 1.
@@ -32946,7 +33065,9 @@ rkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;100%|██████████| 20000/20000 [00:10&amp;lt;00:00, 1901.56it/s]
@@ -32955,7 +33076,9 @@ rkJggg==
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[13]:&lt;/div&gt;
+
 
 
 
@@ -32990,7 +33113,9 @@ rkJggg==
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -33561,8 +33686,7 @@ YII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -33571,8 +33695,7 @@ YII=
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -33585,18 +33708,18 @@ Fist part $\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)]$ of Stein Gradient te
 &lt;h3 id="ASVGD-with-temperature"&gt;ASVGD with temperature&lt;a class="anchor-link" href="#ASVGD-with-temperature"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;em&gt;Input:&lt;/em&gt; Parametrized random generator $R_{\theta}$, $n$ - number of samples from $R_{\theta}$, temperature $T$&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Output:&lt;/em&gt; $R_{\theta^{*}}$ that approximates the target distribution.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;On each iteration&lt;/strong&gt;&lt;/p&gt;
-\begin{align*}
-    \Delta x_i &amp;= \hat{\phi}^{*}(x_i) \\
-    \hat{\phi}^{*}(x) &amp;= \frac{1}{n}\sum^{n}_{j=1}[\color{red}{\frac{1}{T}}k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)] \\
-    \Delta_{\theta} &amp;= \frac{1}{n}\sum^{n}_{i=1}\Delta x_i\frac{\partial x_i}{\partial \theta} \\
-    \theta &amp;\leftarrow \theta + \epsilon \Delta_{\theta}
-\end{align*}&lt;p&gt;Thus higher temperature leads to more diversive posterior&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+    \Delta x_i &amp;amp;= \hat{\phi}^{*}(x_i) \\
+    \hat{\phi}^{*}(x) &amp;amp;= \frac{1}{n}\sum^{n}_{j=1}[\color{red}{\frac{1}{T}}k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)] \\
+    \Delta_{\theta} &amp;amp;= \frac{1}{n}\sum^{n}_{i=1}\Delta x_i\frac{\partial x_i}{\partial \theta} \\
+    \theta &amp;amp;\leftarrow \theta + \epsilon \Delta_{\theta}
+\end{align*}&lt;/p&gt;
+&lt;p&gt;Thus higher temperature leads to more diversive posterior&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -33644,7 +33767,9 @@ Fist part $\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)]$ of Stein Gradient te
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;100%|██████████| 30/30 [07:26&amp;lt;00:00, 14.14s/it]
@@ -33696,7 +33821,9 @@ Fist part $\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)]$ of Stein Gradient te
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -37587,8 +37714,7 @@ CCGEEEIIIYQQ5wEJaYQQQgghhBBCCCHOA/8/7ZnzS1eBxvQAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -37628,7 +37754,9 @@ CCGEEEIIIYQQ5wEJaYQQQgghhBBCCCHOA/8/7ZnzS1eBxvQAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;100%|██████████| 5000/5000 [00:03&amp;lt;00:00, 1576.95it/s]
@@ -37638,7 +37766,9 @@ CCGEEEIIIYQQ5wEJaYQQQgghhBBCCCHOA/8/7ZnzS1eBxvQAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[22]:&lt;/div&gt;
+
 
 
 
@@ -37674,7 +37804,9 @@ CCGEEEIIIYQQ5wEJaYQQQgghhBBCCCHOA/8/7ZnzS1eBxvQAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -38189,8 +38321,7 @@ d8Qe5mrs0RgAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38201,16 +38332,14 @@ d8Qe5mrs0RgAAAAASUVORK5CYII=
 &lt;/div&gt;
  
 
-&lt;/p&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="Experiments"></category></entry><entry><title>Gelato Convolutional MNIST</title><link href="https://ferrine.github.io/blog/2017/05/08/gelato-convolutional-mnist/" rel="alternate"></link><published>2017-05-08T16:14:00+03:00</published><updated>2017-05-08T16:14:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-05-08:/blog/2017/05/08/gelato-convolutional-mnist/</id><summary type="html">
-
+&lt;/p&gt;</content><category term="PyMC3"></category><category term="GSoC"></category><category term="Experiments"></category></entry><entry><title>Gelato Convolutional MNIST</title><link href="https://ferrine.github.io/blog/2017/05/08/gelato-convolutional-mnist/" rel="alternate"></link><published>2017-05-08T16:14:00+03:00</published><updated>2017-05-08T16:14:00+03:00</updated><author><name>Maxim Kochurov</name></author><id>tag:ferrine.github.io,2017-05-08:/blog/2017/05/08/gelato-convolutional-mnist/</id><summary type="html">
 
 
 
 
 &lt;p&gt;I was inspired by &lt;a href="https://github.com/twiecki"&gt;@twiecki&lt;/a&gt; and his great &lt;a href="http://twiecki.github.io/blog/2016/07/05/bayesian-deep-learning/"&gt;post&lt;/a&gt; about Bayesian neural networks. But I thought that that way of creating BNNs is not obvious and easy for people. That's why I decided to make &lt;a href="https://github.com/ferrine/gelato"&gt;Gelato&lt;/a&gt; that is a bridge for &lt;a href="https://github.com/pymc-devs/pymc3"&gt;PyMC3&lt;/a&gt; and &lt;a href="https://github.com/Lasagne/Lasagne"&gt;Lasagne&lt;/a&gt;.
 I will use his convolution bnn from the post as an example of how to use gelato API.</summary><content type="html">&lt;p&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38245,7 +38374,9 @@ I will use his convolution bnn from the post as an example of how to use gelato 
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;WARNING (theano.sandbox.cuda): The cuda backend is deprecated and will be removed in the next release (v0.10).  Please switch to the gpuarray backend. You can get more information about how to switch at this URL:
@@ -38260,8 +38391,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38306,7 +38436,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;Loading data...
@@ -38318,8 +38450,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38346,8 +38477,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38376,7 +38506,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[29]:&lt;/div&gt;
+
 
 
 
@@ -38390,8 +38522,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38417,7 +38548,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[30]:&lt;/div&gt;
+
 
 
 
@@ -38440,8 +38573,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38467,7 +38599,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[31]:&lt;/div&gt;
+
 
 
 
@@ -38481,8 +38615,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38522,7 +38655,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[33]:&lt;/div&gt;
+
 
 
 
@@ -38536,8 +38671,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38563,7 +38697,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[34]:&lt;/div&gt;
+
 
 
 
@@ -38577,8 +38713,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38600,8 +38735,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38629,7 +38763,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[36]:&lt;/div&gt;
+
 
 
 
@@ -38643,8 +38779,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38685,7 +38820,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[38]:&lt;/div&gt;
+
 
 
 
@@ -38699,8 +38836,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38728,7 +38864,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[39]:&lt;/div&gt;
+
 
 
 
@@ -38742,8 +38880,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38769,7 +38906,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[40]:&lt;/div&gt;
+
 
 
 
@@ -38783,8 +38922,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38793,8 +38931,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38819,8 +38956,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38828,8 +38964,7 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38858,7 +38993,9 @@ Using gpu device 0: Tesla K40m (CNMeM is enabled with initial size: 95.0% of mem
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;True
@@ -38871,8 +39008,7 @@ True
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38939,8 +39075,7 @@ True
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38950,8 +39085,7 @@ $$-1 * ELBO=KL[q(w|mu,rho)||p(w)] - E_q[log p(D|w)]$$&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -38978,7 +39112,9 @@ $$-1 * ELBO=KL[q(w|mu,rho)||p(w)] - E_q[log p(D|w)]$$&lt;/p&gt;
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[44]:&lt;/div&gt;
+
 
 
 
@@ -38995,8 +39131,7 @@ $$-1 * ELBO=KL[q(w|mu,rho)||p(w)] - E_q[log p(D|w)]$$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -39024,7 +39159,9 @@ You can find your root model accessing &lt;code&gt;network.root&lt;/code&gt;. It
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[45]:&lt;/div&gt;
+
 
 
 
@@ -39057,8 +39194,7 @@ You can find your root model accessing &lt;code&gt;network.root&lt;/code&gt;. It
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -39099,7 +39235,9 @@ You can find your root model accessing &lt;code&gt;network.root&lt;/code&gt;. It
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;/home/ferres/.pyenv/versions/3.5.0/lib/python3.5/site-packages/theano/tensor/var.py:819: UserWarning: You are creating a TensorVariable with float64 dtype. You requested an action via the Theano flag warn_float64={ignore,warn,raise,pdb}.
@@ -39111,7 +39249,9 @@ Finished [100%]: Average Loss = 287.14
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[47]:&lt;/div&gt;
+
 
 
 
@@ -39125,8 +39265,7 @@ Finished [100%]: Average Loss = 287.14
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -39135,8 +39274,7 @@ Finished [100%]: Average Loss = 287.14
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -39191,7 +39329,9 @@ Finished [100%]: Average Loss = 287.14
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -39507,8 +39647,7 @@ YII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -39551,8 +39690,7 @@ YII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -39603,7 +39741,9 @@ YII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;MAP                      : 0.055000
@@ -39616,8 +39756,7 @@ predictive posterior mode: 0.047000
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -39658,7 +39797,9 @@ predictive posterior mode: 0.047000
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;true: 9.0 prediction: 3
@@ -39667,7 +39808,9 @@ predictive posterior mode: 0.047000
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -39678,7 +39821,9 @@ predictive posterior mode: 0.047000
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -39780,7 +39925,9 @@ uTepvP44ZQAQCAQAoexA6Cx5+3nor5gq91fl3qSS+iv1GgKAain7CAFAhRAIAAKBACAQCAACgQAg
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;true: 8.0 prediction: 0
@@ -39789,7 +39936,9 @@ uTepvP44ZQAQCAQAoexA6Cx5+3nor5gq91fl3qSS+iv1GgKAain7CAFAhRAIAAKBACAQCAACgQAg
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -39800,7 +39949,9 @@ uTepvP44ZQAQCAQAoexA6Cx5+3nor5gq91fl3qSS+iv1GgKAain7CAFAhRAIAAKBACAQCAACgQAg
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -39881,8 +40032,7 @@ EAAkFAKAhEIAkPw/I8USZZUldgQAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -39912,7 +40062,9 @@ EAAkFAKAhEIAkPw/I8USZZUldgQAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[59]:&lt;/div&gt;
+
 
 
 
@@ -39923,7 +40075,9 @@ EAAkFAKAhEIAkPw/I8USZZUldgQAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40214,8 +40368,7 @@ ShKCEEIIAP4/Jj0zYgFKy/cAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -40224,8 +40377,7 @@ ShKCEEIIAP4/Jj0zYgFKy/cAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -40257,7 +40409,9 @@ ShKCEEIIAP4/Jj0zYgFKy/cAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[72]:&lt;/div&gt;
+
 
 
 
@@ -40268,7 +40422,9 @@ ShKCEEIIAP4/Jj0zYgFKy/cAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40419,8 +40575,7 @@ gHHijoXZP6UAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -40446,7 +40601,9 @@ gHHijoXZP6UAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[61]:&lt;/div&gt;
+
 
 
 
@@ -40460,8 +40617,7 @@ gHHijoXZP6UAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -40488,7 +40644,9 @@ gHHijoXZP6UAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[62]:&lt;/div&gt;
+
 
 
 
@@ -40502,8 +40660,7 @@ gHHijoXZP6UAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -40529,7 +40686,9 @@ gHHijoXZP6UAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[64]:&lt;/div&gt;
+
 
 
 
@@ -40590,7 +40749,9 @@ gHHijoXZP6UAAAAASUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;true: 6.0 prediction: 1
@@ -40599,7 +40760,9 @@ gHHijoXZP6UAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40610,7 +40773,9 @@ gHHijoXZP6UAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40680,7 +40845,9 @@ EQgA0n8B/rWZKfkBvyEAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;true: 9.0 prediction: 0
@@ -40689,7 +40856,9 @@ EQgA0n8B/rWZKfkBvyEAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40700,7 +40869,9 @@ EQgA0n8B/rWZKfkBvyEAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40778,7 +40949,9 @@ eAAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;true: 1.0 prediction: 2
@@ -40787,7 +40960,9 @@ eAAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40798,7 +40973,9 @@ eAAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40871,7 +41048,9 @@ YII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;true: 7.0 prediction: 2
@@ -40880,7 +41059,9 @@ YII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40891,7 +41072,9 @@ YII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -40969,8 +41152,7 @@ SUVORK5CYII=
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -40979,8 +41161,7 @@ SUVORK5CYII=
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -41019,7 +41200,9 @@ SUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[69]:&lt;/div&gt;
+
 
 
 
@@ -41069,7 +41252,9 @@ SUVORK5CYII=
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;true: 9.0 prediction: 5 expected error rate: 0.78
@@ -41078,7 +41263,9 @@ SUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -41089,7 +41276,9 @@ SUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -41168,7 +41357,9 @@ Kmi+Qs8hACiXovcQAJQIhQAgUAgAAoUAIFAIAML/Ad8zPxXRZUUpAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;true: 4.0 prediction: 6 expected error rate: 0.75
@@ -41177,7 +41368,9 @@ Kmi+Qs8hACiXovcQAJQIhQAgUAgAAoUAIFAIAML/Ad8zPxXRZUUpAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -41188,7 +41381,9 @@ Kmi+Qs8hACiXovcQAJQIhQAgUAgAAoUAIFAIAML/Ad8zPxXRZUUpAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -41266,7 +41461,9 @@ FAKAQCEACP8HmeE1n/91ENoAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;true: 2.0 prediction: 2 expected error rate: 0.73
@@ -41275,7 +41472,9 @@ FAKAQCEACP8HmeE1n/91ENoAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -41286,7 +41485,9 @@ FAKAQCEACP8HmeE1n/91ENoAAAAASUVORK5CYII=
 &lt;/div&gt;
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 
 
@@ -41370,8 +41571,7 @@ T7uaEv4KHQAAAABJRU5ErkJggg==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -41382,7 +41582,7 @@ T7uaEv4KHQAAAABJRU5ErkJggg==
 &lt;/div&gt;
  
 
-&lt;/p&gt;</content><category term="Gelato"></category><category term="Lasagne"></category><category term="PyMC3"></category></entry><entry><title>Accepted to GSoC</title><link href="https://ferrine.github.io/blog/2017/05/05/accepted-to-gsoc/" rel="alternate"></link><published>2017-05-05T02:20:00+03:00</published><updated>2017-05-05T02:20:00+03:00</updated><author><name>Kochurov Maxim</name></author><id>tag:ferrine.github.io,2017-05-05:/blog/2017/05/05/accepted-to-gsoc/</id><summary type="html">Yesterday I got an email from &lt;a href="https://www.numfocus.org/"&gt;NumFOCUS&lt;/a&gt; with congratulations. 
+&lt;/p&gt;</content><category term="Gelato"></category><category term="Lasagne"></category><category term="PyMC3"></category></entry><entry><title>Accepted to GSoC</title><link href="https://ferrine.github.io/blog/2017/05/05/accepted-to-gsoc/" rel="alternate"></link><published>2017-05-05T02:20:00+03:00</published><updated>2017-05-05T02:20:00+03:00</updated><author><name>Maxim Kochurov</name></author><id>tag:ferrine.github.io,2017-05-05:/blog/2017/05/05/accepted-to-gsoc/</id><summary type="html">Yesterday I got an email from &lt;a href="https://www.numfocus.org/"&gt;NumFOCUS&lt;/a&gt; with congratulations. 
 They said that I had been accepted to GSoC. So summer is going to be full of adventures. I'd like
 say many thanks to my mentors, &lt;a href="https://github.com/taku-y"&gt;Taku Yoshioka&lt;/a&gt; and &lt;a href="https://github.com/twiecki"&gt;Thomas Wiecki&lt;/a&gt;, 
 for choosing me.</summary><content type="html">&lt;h1&gt;Hurray!&lt;/h1&gt;

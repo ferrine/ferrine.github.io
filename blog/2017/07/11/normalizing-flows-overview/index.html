@@ -21,7 +21,7 @@
 </script>
     <meta name="generator" content="Pelican" />
     <meta name="description" content="" />
-    <meta name="author" content="Kochurov Maxim" />
+    <meta name="author" content="Maxim Kochurov" />
 
     <meta name="keywords" content="PyMC3,GSoC,features" />
 </head>
@@ -55,8 +55,7 @@
 		        <p>One of milestones in my Google Summer of Code was implementing Normalizing Flows. They appeared 
 to be very interesting and hard to use. See post below</p>
 <p>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -85,15 +84,17 @@ to be very interesting and hard to use. See post below</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Theory">Theory<a class="anchor-link" href="#Theory">&#182;</a></h2><p>Normalizing Flow is a series of invertible transformations on initial distribution.</p>
-$$z_K = f_K \circ \dots \circ f_2 \circ f_1(z_0) $$<p>In that case we can compute tractable density for the flow.</p>
-$$\ln q_K(z_K) = \ln q_0(z_0) - \sum_{k=1}^{K}\ln \left|\frac{\partial f_k}{\partial z_{k-1}}\right|$$<p>Every $f_k$ here is a parametric function with defined determinant. We can choose every step here. For example the simplest flow is an affine transform:</p>
-$$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approximation if $z_0 \sim \mathcal{N}(0, 1)$</p>
+<p>$$z_K = f_K \circ \dots \circ f_2 \circ f_1(z_0) $$</p>
+<p>In that case we can compute tractable density for the flow.</p>
+<p>$$\ln q_K(z_K) = \ln q_0(z_0) - \sum_{k=1}^{K}\ln \left|\frac{\partial f_k}{\partial z_{k-1}}\right|$$</p>
+<p>Every $f_k$ here is a parametric function with defined determinant. We can choose every step here. For example the simplest flow is an affine transform:</p>
+<p>$$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$</p>
+<p>Here we get mean field approximation if $z_0 \sim \mathcal{N}(0, 1)$</p>
 <h2 id="Flow-Formulas">Flow Formulas<a class="anchor-link" href="#Flow-Formulas">&#182;</a></h2><p>In PyMC3 there is a flexible way to define flows with formulas. We have 5 of them by the moment:</p>
 <ul>
 <li>Loc (<code>loc</code>): $z' = z + \mu$</li>
@@ -106,8 +107,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -134,7 +134,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[2]:</div>
+
 
 
 
@@ -165,7 +167,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[3]:</div>
+
 
 
 
@@ -179,8 +183,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -203,8 +206,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -230,7 +232,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[5]:</div>
+
 
 
 
@@ -244,8 +248,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -271,7 +274,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[6]:</div>
+
 
 
 
@@ -285,8 +290,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -312,7 +316,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[7]:</div>
+
 
 
 
@@ -326,8 +332,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -353,7 +358,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[8]:</div>
+
 
 
 
@@ -367,8 +374,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -381,8 +387,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -390,8 +395,7 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -484,7 +488,9 @@ $$z = loc(scale(z_0)) = \mu + \sigma * z_0 $$<p>Here we get mean field approxima
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -1090,8 +1096,7 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1113,8 +1118,7 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1141,7 +1145,9 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Assigned NUTS to pot1
@@ -1172,7 +1178,9 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[14]:</div>
+
 
 
 
@@ -1183,7 +1191,9 @@ AAAAeCJQAQAAAIAnAhUAAAAAeCJQAQAAAICn/w+JY59TTc8PfgAAAABJRU5ErkJggg==
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -1538,8 +1548,7 @@ TCAiIskwhIiISDIMISIikgxDiIiIJMMQIiIiyTCEiIhIMv8fiWsqO0qAtoMAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1571,7 +1580,9 @@ TCAiIskwhIiISDIMISIikgxDiIiIJMMQIiIiyTCEiIhIMv8fiWsqO0qAtoMAAAAASUVORK5CYII=
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -1886,8 +1897,7 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1914,7 +1924,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[16]:</div>
+
 
 
 
@@ -1946,7 +1958,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[17]:</div>
+
 
 
 
@@ -1977,7 +1991,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_text output_error">
 <pre>
@@ -2014,7 +2030,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[19]:</div>
+
 
 
 
@@ -2076,7 +2094,9 @@ GEJERCQbhhAREcmGIURERLL5/6LZP6+jbPx5AAAAAElFTkSuQmCC
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Average Loss = -1.3917: 100%|██████████| 60000/60000 [01:24&lt;00:00, 706.32it/s] 
@@ -2086,7 +2106,9 @@ Finished [100%]: Average Loss = -1.4061
 </div>
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[21]:</div>
+
 
 
 
@@ -2117,7 +2139,9 @@ Finished [100%]: Average Loss = -1.4061
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -2455,8 +2479,7 @@ kcz+H+kHm2mEiPnCAAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2483,7 +2506,9 @@ kcz+H+kHm2mEiPnCAAAAAElFTkSuQmCC
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[23]:</div>
+
 
 
 
@@ -2494,7 +2519,9 @@ kcz+H+kHm2mEiPnCAAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -2847,7 +2874,9 @@ gg==
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[24]:</div>
+
 
 
 
@@ -2922,7 +2951,9 @@ gg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -10552,8 +10583,7 @@ giAIgiCIQcb/BzWMuGUTcj6SAAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -10579,7 +10609,9 @@ giAIgiCIQcb/BzWMuGUTcj6SAAAAAElFTkSuQmCC
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Average Loss = -1.2703: 100%|██████████| 60000/60000 [01:16&lt;00:00, 784.75it/s]
@@ -10589,7 +10621,9 @@ Finished [100%]: Average Loss = -1.2625
 </div>
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[27]:</div>
+
 
 
 
@@ -10620,7 +10654,9 @@ Finished [100%]: Average Loss = -1.2625
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -18532,7 +18568,9 @@ AElFTkSuQmCC
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[29]:</div>
+
 
 
 
@@ -18543,7 +18581,9 @@ AElFTkSuQmCC
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -18874,8 +18914,7 @@ paSk4PHHH5ejNCJNYydERESK4cQEIiJSDEOIiIgUwxAiIiLFMISIiEgxDCEiIlIMQ4iIiBTz/8Gc
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -18884,8 +18923,7 @@ paSk4PHHH5ejNCJNYydERESK4cQEIiJSDEOIiIgUwxAiIiLFMISIiEgxDCEiIlIMQ4iIiBTz/8Gc
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -18916,7 +18954,9 @@ paSk4PHHH5ejNCJNYydERESK4cQEIiJSDEOIiIgUwxAiIiLFMISIiEgxDCEiIlIMQ4iIiBTz/8Gc
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[30]:</div>
+
 
 
 
@@ -18927,7 +18967,9 @@ paSk4PHHH5ejNCJNYydERESK4cQEIiJSDEOIiIgUwxAiIiLFMISIiEgxDCEiIlIMQ4iIiBTz/8Gc
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -19266,8 +19308,7 @@ AABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19293,7 +19334,9 @@ AABJRU5ErkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Average Loss = -1.76: 100%|██████████| 25000/25000 [02:10&lt;00:00, 191.90it/s]  
@@ -19303,7 +19346,9 @@ Finished [100%]: Average Loss = -1.7604
 </div>
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[31]:</div>
+
 
 
 
@@ -19335,7 +19380,9 @@ Finished [100%]: Average Loss = -1.7604
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[32]:</div>
+
 
 
 
@@ -19346,7 +19393,9 @@ Finished [100%]: Average Loss = -1.7604
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -19716,8 +19765,7 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19726,8 +19774,7 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19765,6 +19812,8 @@ SAiATRGrYCEax7luAAAAAElFTkSuQmCC
                     <tr>
                         <td style="padding:0 15px 0 15px; text-align: center"><a href="https://twitter.com/ferrine96">Twitter</a></td>
                         <td style="padding:0 15px 0 15px; text-align: center"><a href="https://github.com/ferrine">GitHub</a></td>
+                        <td style="padding:0 15px 0 15px; text-align: center"><a href="https://t.me/ferres">Telegram</a></td>
+                        <td style="padding:0 15px 0 15px; text-align: center"><a href="https://www.linkedin.com/in/ferrine/">LinkedIn</a></td>
                     </tr>
                 </table>
                 <p>

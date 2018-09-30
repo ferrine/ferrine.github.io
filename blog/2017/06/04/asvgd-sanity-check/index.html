@@ -21,7 +21,7 @@
 </script>
     <meta name="generator" content="Pelican" />
     <meta name="description" content="" />
-    <meta name="author" content="Kochurov Maxim" />
+    <meta name="author" content="Maxim Kochurov" />
 
     <meta name="keywords" content="PyMC3,GSoC,Experiments" />
 </head>
@@ -54,8 +54,7 @@
 
 		        <p>During My GSoC I was also working on state-of-the-art methods from recent papers. One of them was Amortized Stein Variational Gradient Descent (ASVGD). I found this method to be problematic and decided to write a blogpost with this evidence.</p>
 <p>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -85,8 +84,7 @@
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -118,7 +116,9 @@
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -460,8 +460,7 @@ AABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -488,7 +487,9 @@ AABJRU5ErkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Average Loss = 0.0024892: 100%|██████████| 10000/10000 [00:00&lt;00:00, 15290.73it/s]
@@ -526,7 +527,9 @@ Finished [100%]: Average Loss = 0.0025053
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[4]:</div>
+
 
 
 
@@ -537,7 +540,9 @@ Finished [100%]: Average Loss = 0.0025053
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -956,8 +961,7 @@ ESHSWAkhhBBCRIg0VkIIIYQQEfL/AcnSQ5aldIANAAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -966,8 +970,7 @@ ESHSWAkhhBBCRIg0VkIIIYQQEfL/AcnSQ5aldIANAAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -978,12 +981,13 @@ they fit target distribution best.</p>
 <p><em>Input:</em> Parametrized random generator $R_{\theta}$, $n$ - number of samples from $R_{\theta}$</p>
 <p><em>Output:</em> $R_{\theta^{*}}$ that approximates the target distribution.</p>
 <p><strong>On each iteration</strong></p>
-\begin{align*}
-    \Delta x_i &= \hat{\phi}^{*}(x_i) \\
-    \hat{\phi}^{*}(x) &= \frac{1}{n}\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)] \\
-    \Delta_{\theta} &= \frac{1}{n}\sum^{n}_{i=1}\Delta x_i\frac{\partial x_i}{\partial \theta} \\
-    \theta &\leftarrow \theta + \epsilon \Delta_{\theta}
-\end{align*}<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
+<p>\begin{align*}
+    \Delta x_i &amp;= \hat{\phi}^{*}(x_i) \\
+    \hat{\phi}^{*}(x) &amp;= \frac{1}{n}\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)] \\
+    \Delta_{\theta} &amp;= \frac{1}{n}\sum^{n}_{i=1}\Delta x_i\frac{\partial x_i}{\partial \theta} \\
+    \theta &amp;\leftarrow \theta + \epsilon \Delta_{\theta}
+\end{align*}</p>
+<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
 <li><p>Dilin Wang, Yihao Feng, Qiang Liu (2016)
 Learning to Sample Using Stein Discrepancy
 <a href="http://bayesiandeeplearning.org/papers/BDL_21.pdf">http://bayesiandeeplearning.org/papers/BDL_21.pdf</a></p>
@@ -1001,8 +1005,7 @@ arXiv:1704.02399</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1029,7 +1032,9 @@ arXiv:1704.02399</p>
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Users/ferres/dev/pymc3/pymc3/variational/inference.py:63: UserWarning: You are using experimental inference Operator. It requires careful choice of temperature, default is 1. Default temperature works well for low dimensional problems and for significant `n_obj_mc`. Temperature &gt; 1 gives more exploration power to algorithm, &lt; 1 leads to undesirable results. Please take it in account when looking at inference result. Posterior variance is often **underestimated** when using temperature = 1.
@@ -1042,8 +1047,7 @@ arXiv:1704.02399</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1081,7 +1085,9 @@ arXiv:1704.02399</p>
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>100%|██████████| 500/500 [01:00&lt;00:00,  8.38it/s]
@@ -1090,7 +1096,9 @@ arXiv:1704.02399</p>
 </div>
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[6]:</div>
+
 
 
 
@@ -1125,7 +1133,9 @@ arXiv:1704.02399</p>
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -1572,8 +1582,7 @@ SgghhBAiTKRYCSGEEEKEyf8DLiTY8BFb2YEAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1603,7 +1612,9 @@ SgghhBAiTKRYCSGEEEKEyf8DLiTY8BFb2YEAAAAASUVORK5CYII=
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -2239,8 +2250,7 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2267,7 +2277,9 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Users/ferres/dev/pymc3/pymc3/variational/inference.py:63: UserWarning: You are using experimental inference Operator. It requires careful choice of temperature, default is 1. Default temperature works well for low dimensional problems and for significant `n_obj_mc`. Temperature &gt; 1 gives more exploration power to algorithm, &lt; 1 leads to undesirable results. Please take it in account when looking at inference result. Posterior variance is often **underestimated** when using temperature = 1.
@@ -2302,7 +2314,9 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>100%|██████████| 20000/20000 [00:09&lt;00:00, 2010.84it/s]
@@ -2311,7 +2325,9 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 </div>
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[8]:</div>
+
 
 
 
@@ -2346,7 +2362,9 @@ iIiIiChj/j9QTYep5nLHwgAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -2835,8 +2853,7 @@ RK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2869,7 +2886,9 @@ RK5CYII=
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Users/ferres/dev/pymc3/pymc3/variational/inference.py:63: UserWarning: You are using experimental inference Operator. It requires careful choice of temperature, default is 1. Default temperature works well for low dimensional problems and for significant `n_obj_mc`. Temperature &gt; 1 gives more exploration power to algorithm, &lt; 1 leads to undesirable results. Please take it in account when looking at inference result. Posterior variance is often **underestimated** when using temperature = 1.
@@ -2880,7 +2899,9 @@ RK5CYII=
 </div>
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[10]:</div>
+
 
 
 
@@ -2915,7 +2936,9 @@ RK5CYII=
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -3404,8 +3427,7 @@ rkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -3432,7 +3454,9 @@ rkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Users/ferres/dev/pymc3/pymc3/variational/inference.py:63: UserWarning: You are using experimental inference Operator. It requires careful choice of temperature, default is 1. Default temperature works well for low dimensional problems and for significant `n_obj_mc`. Temperature &gt; 1 gives more exploration power to algorithm, &lt; 1 leads to undesirable results. Please take it in account when looking at inference result. Posterior variance is often **underestimated** when using temperature = 1.
@@ -3472,7 +3496,9 @@ rkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>100%|██████████| 20000/20000 [00:10&lt;00:00, 1901.56it/s]
@@ -3481,7 +3507,9 @@ rkJggg==
 </div>
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[13]:</div>
+
 
 
 
@@ -3516,7 +3544,9 @@ rkJggg==
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -4087,8 +4117,7 @@ YII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -4097,8 +4126,7 @@ YII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -4111,18 +4139,18 @@ Fist part $\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)]$ of Stein Gradient te
 <h3 id="ASVGD-with-temperature">ASVGD with temperature<a class="anchor-link" href="#ASVGD-with-temperature">&#182;</a></h3><p><em>Input:</em> Parametrized random generator $R_{\theta}$, $n$ - number of samples from $R_{\theta}$, temperature $T$</p>
 <p><em>Output:</em> $R_{\theta^{*}}$ that approximates the target distribution.</p>
 <p><strong>On each iteration</strong></p>
-\begin{align*}
-    \Delta x_i &= \hat{\phi}^{*}(x_i) \\
-    \hat{\phi}^{*}(x) &= \frac{1}{n}\sum^{n}_{j=1}[\color{red}{\frac{1}{T}}k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)] \\
-    \Delta_{\theta} &= \frac{1}{n}\sum^{n}_{i=1}\Delta x_i\frac{\partial x_i}{\partial \theta} \\
-    \theta &\leftarrow \theta + \epsilon \Delta_{\theta}
-\end{align*}<p>Thus higher temperature leads to more diversive posterior</p>
+<p>\begin{align*}
+    \Delta x_i &amp;= \hat{\phi}^{*}(x_i) \\
+    \hat{\phi}^{*}(x) &amp;= \frac{1}{n}\sum^{n}_{j=1}[\color{red}{\frac{1}{T}}k(x_j,x) \nabla_{x_j} logp(x_j)+ \nabla_{x_j} k(x_j,x)] \\
+    \Delta_{\theta} &amp;= \frac{1}{n}\sum^{n}_{i=1}\Delta x_i\frac{\partial x_i}{\partial \theta} \\
+    \theta &amp;\leftarrow \theta + \epsilon \Delta_{\theta}
+\end{align*}</p>
+<p>Thus higher temperature leads to more diversive posterior</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -4170,7 +4198,9 @@ Fist part $\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)]$ of Stein Gradient te
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>100%|██████████| 30/30 [07:26&lt;00:00, 14.14s/it]
@@ -4222,7 +4252,9 @@ Fist part $\sum^{n}_{j=1}[k(x_j,x) \nabla_{x_j} logp(x_j)]$ of Stein Gradient te
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -8113,8 +8145,7 @@ CCGEEEIIIYQQ5wEJaYQQQgghhBBCCCHOA/8/7ZnzS1eBxvQAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -8154,7 +8185,9 @@ CCGEEEIIIYQQ5wEJaYQQQgghhBBCCCHOA/8/7ZnzS1eBxvQAAAAASUVORK5CYII=
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>100%|██████████| 5000/5000 [00:03&lt;00:00, 1576.95it/s]
@@ -8164,7 +8197,9 @@ CCGEEEIIIYQQ5wEJaYQQQgghhBBCCCHOA/8/7ZnzS1eBxvQAAAAASUVORK5CYII=
 </div>
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[22]:</div>
+
 
 
 
@@ -8200,7 +8235,9 @@ CCGEEEIIIYQQ5wEJaYQQQgghhBBCCCHOA/8/7ZnzS1eBxvQAAAAASUVORK5CYII=
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 
@@ -8715,8 +8752,7 @@ d8Qe5mrs0RgAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -8754,6 +8790,8 @@ d8Qe5mrs0RgAAAAASUVORK5CYII=
                     <tr>
                         <td style="padding:0 15px 0 15px; text-align: center"><a href="https://twitter.com/ferrine96">Twitter</a></td>
                         <td style="padding:0 15px 0 15px; text-align: center"><a href="https://github.com/ferrine">GitHub</a></td>
+                        <td style="padding:0 15px 0 15px; text-align: center"><a href="https://t.me/ferres">Telegram</a></td>
+                        <td style="padding:0 15px 0 15px; text-align: center"><a href="https://www.linkedin.com/in/ferrine/">LinkedIn</a></td>
                     </tr>
                 </table>
                 <p>
