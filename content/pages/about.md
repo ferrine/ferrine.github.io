@@ -5,7 +5,7 @@ Maxim Kochurov
 
 **Current Position**: Researcher @ Samsung AI (Moscow), [BayesGroup](https://bayesgroup.ru), MSc student @ [Skoltech](https://www.skoltech.ru), Core Dev @ [PyMC3](https://github.com/pymc-devs/pymc3)
 
-**Fields of interest**: Bayesian statistics, variational inference, machine learning, causal inference
+**Fields of interest**: Bayesian statistics, variational inference, machine learning, causal inference, open source
 
 **About me**
 
@@ -39,5 +39,8 @@ We also plan to build PyMC4.
 Time passed, I had a Data Science related internship @ [Yandex](https://yandex.ru/company/) again.
 That was a consulting experience, it was valuable, but I was getting more and more biased into research.
 Right after the internship I was invited to [BayesGroup](https://bayesgroup.ru).
+There I started working with bright people and it is really motivating.
+I had my first writing experience submitting a workshop [paper](https://openreview.net/forum?id=ByZzFPJDG) to ICLR.
+We soon moved to a new Samsung AI Center in Moscow and HSE, Samsung joint lab where we got better resources for ongoing research.
 
-I got myself satisfied with what I do, finally.
+I'm quite satisfied with what I'm doing now, cool feeling
