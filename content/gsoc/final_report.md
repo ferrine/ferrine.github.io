@@ -16,7 +16,7 @@ I'm planning to continue further contributions in PyMC3 Variational Inference an
 ## Normalising Flows
 By now I've finished 2 huge PRs ([pymc3/#2306](https://github.com/pymc-devs/pymc3/pull/2306), [pymc3/#2362](https://github.com/pymc-devs/pymc3/pull/2362)) implementing Normalizing Flows. Now
 PyMC3 has state-of-the-art VI algorithms for both large and small models. You can see how it works in our
-[documentation](http://docs.pymc.io/en/latest/examples.html#variational-inference). The work that is done here:
+[documentation](https://docs.pymc.io/notebooks/variational_api_quickstart.html). The work that is done here:
 
 -   new `flows.py` module created
 -   refactored `pm.variational` to support Normalizing Flows 
